@@ -29,7 +29,6 @@
         </form>
     </div>
 
-
     <div class="container pb-4 text-center">
       <div class="row row-cols-1">
         <div class="col">
@@ -48,14 +47,15 @@
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="presenteIo"> io </span>
-                              <input type="text" class="form-control"  aria-describedby="presenteIo">
+                              <input type="text" class="form-control" id="exPresentIo">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
                                 {% if verbo.tempo == 'Presente' %}
-                                {{ verbo.io }}
+                                <input type="text" class="form-control" value="{{ verbo.io }}" id="answerPresenteIo" hidden>
+                                <span class="CSSverbsAnswerPresentIo">{{ verbo.io }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -65,14 +65,15 @@
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="presenteTu"> tu </span>
-                              <input type="text" class="form-control"  aria-describedby="presenteTu">
+                              <input type="text" class="form-control" id="exPresentTu">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
                                 {% if verbo.tempo == 'Presente' %}
-                                {{ verbo.tu }}
+                                    <input type="text" class="form-control" value="{{ verbo.tu }}" id="answerPresenteTu" hidden>
+                                    <span class="CSSverbsAnswerPresentTu">{{ verbo.tu }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -82,14 +83,15 @@
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="presenteLui">lui</span>
-                              <input type="text" class="form-control"  aria-describedby="presenteLui">
+                              <input type="text" class="form-control" id="exPresentLui">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
                                 {% if verbo.tempo == 'Presente' %}
-                                {{ verbo.lui }}
+                                <input type="text" class="form-control" value="{{ verbo.lui }}" id="answerPresenteLui" hidden>
+                                <span class="CSSverbsAnswerPresentLui">{{ verbo.lui }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -99,14 +101,15 @@
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="presenteNoi">noi</span>
-                              <input type="text" class="form-control"  aria-describedby="presenteNoi">
+                              <input type="text" class="form-control" id="exPresentNoi">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
                                 {% if verbo.tempo == 'Presente' %}
-                                {{ verbo.noi }}
+                                    <input type="text" class="form-control" value="{{ verbo.noi }}" id="answerPresenteNoi" hidden>
+                                    <span class="CSSverbsAnswerPresentNoi">{{ verbo.noi }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -116,14 +119,15 @@
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="presenteVoi">voi</span>
-                              <input type="text" class="form-control"  aria-describedby="presenteVoi">
+                              <input type="text" class="form-control" id="exPresentVoi">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
                                 {% if verbo.tempo == 'Presente' %}
-                                {{ verbo.voi }}
+                                <input type="text" class="form-control" value="{{ verbo.voi }}" id="answerPresenteVoi" hidden>
+                                <span class="CSSverbsAnswerPresentVoi">{{ verbo.voi }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -133,14 +137,15 @@
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="presenteLoro">loro</span>
-                              <input type="text" class="form-control"  aria-describedby="presenteLoro">
+                              <input type="text" class="form-control" id="exPresentLoro">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
                                 {% if verbo.tempo == 'Presente' %}
-                                {{ verbo.loro }}
+                                <input type="text" class="form-control" value="{{ verbo.loro }}" id="answerPresenteLoro" hidden>
+                                <span class="CSSverbsAnswerPresentLoro">{{ verbo.loro }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -149,7 +154,7 @@
                   <tr>
                       <td colspan="2" class="text-center">
                         <div class="input-group input-group-sm mb-2">
-                          <button type="button" class="btn btn-outline-dark">Controlla</button>
+                          <button type="button" class="btn btn-outline-dark" id="answerPresente">Controlla</button>
                       </div>
                       </td>
                   </tr>
@@ -195,28 +200,18 @@
     </div>
 
     <div>
-    Verbo: Essere
-{% for item in verbi %}
-    {% if item.verbo == "essere" %}
-        {% if item.tempo == "presente" %}<br>
-        Presente<br>
-        Io {{ item.io }}<br>
-        Tu {{ item.tu }}<br>
-        Lui/lei/Lei {{ item.io }}<br>
-        Noi {{ item.tu }}<br>
-        Voi {{ item.io }}<br>
-        Loro {{ item.tu }}<br>
-        {% endif %}
-    {% endif %}
-{% endfor %}
 </div>
 
 
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="{{ url_for('static', filename='js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery/jquery-2.2.4.min.js') }}" async></script>
     <!-- Bootstrap js 4.5.2 -->
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" async></script>
+
+    <!--    JS to the verbs beginning   -->
+    <script src="{{ url_for('static', filename='js/presente.js') }}"></script>
+    <!--    JS to the verbs ending     -->
 </body>
 </html>
