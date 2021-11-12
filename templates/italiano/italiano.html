@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Italiano</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+    <link rel="shortcut icon" href="#" />
+
+</head>
+<body>
+    <br>
+    <div class="container pb-4">
+        <form method="POST" action="{{ url_for('ita.italianoAltroVerbo') }}" enctype="multipart/form-data" >
+            <div class="form-group">
+                <label for="verbo">Example select</label>
+                <select class="form-control" id="verbo", name="verbo">
+                    {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                        {% if item == ilverbo[0].verbo %}
+                            <option value="{{ item }}" selected>&nbsp;&nbsp; - {{ item | capitalize }}</option>
+                        {% else %}
+                            <option value="{{ item }}">&nbsp;&nbsp; - {{ item | capitalize }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container pb-4 text-center">
+      <div class="row row-cols-1">
+        <div class="col">
+          <h4 class="p-3 border bg-light">Verbo&nbsp; "{{ ilverbo[0].verbo|capitalize }}"</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-4 row-cols-lg-4 g-2 g-lg-4">
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Presente</div>
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td>
+                          <div class="input-group input-group-sm mb-2">
+                              <span class="input-group-text" id="presenteIo"> io </span>
+                              <input type="text" class="form-control"  aria-describedby="presenteIo">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                {{ verbo.io }}
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="input-group input-group-sm mb-2">
+                              <span class="input-group-text" id="presenteTu"> tu </span>
+                              <input type="text" class="form-control"  aria-describedby="presenteTu">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                {{ verbo.tu }}
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="input-group input-group-sm mb-2">
+                              <span class="input-group-text" id="presenteLui">lui</span>
+                              <input type="text" class="form-control"  aria-describedby="presenteLui">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                {{ verbo.lui }}
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="input-group input-group-sm mb-2">
+                              <span class="input-group-text" id="presenteNoi">noi</span>
+                              <input type="text" class="form-control"  aria-describedby="presenteNoi">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                {{ verbo.noi }}
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="input-group input-group-sm mb-2">
+                              <span class="input-group-text" id="presenteVoi">voi</span>
+                              <input type="text" class="form-control"  aria-describedby="presenteVoi">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                {{ verbo.voi }}
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div class="input-group input-group-sm mb-2">
+                              <span class="input-group-text" id="presenteLoro">loro</span>
+                              <input type="text" class="form-control"  aria-describedby="presenteLoro">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                {{ verbo.loro }}
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm mb-2">
+                          <button type="button" class="btn btn-outline-dark">Controlla</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Passato prossimo</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Imperfetto</div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Trapassato prossimo</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Passato remoto</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Trapassato remoto</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Fururo semplice</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Futuro anteriore</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+    Verbo: Essere
+{% for item in verbi %}
+    {% if item.verbo == "essere" %}
+        {% if item.tempo == "presente" %}<br>
+        Presente<br>
+        Io {{ item.io }}<br>
+        Tu {{ item.tu }}<br>
+        Lui/lei/Lei {{ item.io }}<br>
+        Noi {{ item.tu }}<br>
+        Voi {{ item.io }}<br>
+        Loro {{ item.tu }}<br>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</div>
+
+
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{{ url_for('static', filename='js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <!-- Bootstrap js 4.5.2 -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" async></script>
+</body>
+</html>
