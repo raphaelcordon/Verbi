@@ -13,14 +13,240 @@
     <br>
     <div class="container pb-4">
         <h2 class="text-center">Scegli un verbo</h2>
-        <div class="btn-group" role="group" aria-label="verbiItaliani">
+
+            <div>A:</div>
             {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'a' %}
                 <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
                     <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
                 </a>
-
+                {% endif %}
             {% endfor %}
-        </div>
+            <br>
+            <div>B:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'b' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>C:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'c' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>D:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'd' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>E:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'e' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+                <br>
+            <div>F:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'f' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>G:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'g' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>H:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'h' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>I:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'i' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>J:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'j' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+                <br>
+            <div>K:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'k' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>L:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'l' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>M:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'm' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>N:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'n' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>O:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'O' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+                <br>
+            <div>P:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'p' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>Q:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'q' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>R:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'r' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>S:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 's' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>T:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 't' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+                <br>
+            <div>U:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'u' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>V:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'v' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>X:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'X' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>Y:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'y' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <div>Z:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'z' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
+                <br>
+            <div>F:</div>
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item[0] == 'f' %}
+                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
+                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
+                </a>
+                {% endif %}
+            {% endfor %}
     </div>
 
 
