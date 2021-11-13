@@ -1,3 +1,6 @@
+/* ----------------------------- */
+/*           PRESENTE           */
+
 .CSSverbsAnswerPresentIo {
     display: none;
 }
@@ -22,3 +25,29 @@
     display: none;
 }
 
+/* ----------------------------- */
+/*       PASSATO PROSSIMO       */
+
+.CSSverbsAnswerpassatoProssimoIo {
+    display: none;
+}
+
+.CSSverbsAnswerpassatoProssimoTu {
+    display: none;
+}
+
+.CSSverbsAnswerpassatoProssimoLui {
+    display: none;
+}
+
+.CSSverbsAnswerpassatoProssimoNoi {
+    display: none;
+}
+
+.CSSverbsAnswerpassatoProssimoVoi {
+    display: none;
+}
+
+.CSSverbsAnswerpassatoProssimoLoro {
+    display: none;
+}
