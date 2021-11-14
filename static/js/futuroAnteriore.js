@@ -1,4 +1,7 @@
 $(document).on('click', "#answerfuturoAnteriore", function () {
+    runfuturoAnteriore();
+});
+function runfuturoAnteriore() {
 
     var exfuturoAnterioreIo = document.getElementById('exfuturoAnterioreIo').value;
     var exfuturoAnterioreTu = document.getElementById('exfuturoAnterioreTu').value;
@@ -54,7 +57,7 @@ $(document).on('click', "#answerfuturoAnteriore", function () {
     }else{
         $('.CSSverbsAnswerfuturoAnterioreLoro').attr('style', 'display: initial; color: red;');
     };
-  });
+  };
 
 // Cleaning the form
 $(document).on('click', "#ricominciafuturoAnteriore", function () {

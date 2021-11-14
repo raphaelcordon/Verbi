@@ -7,26 +7,26 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+
     <link rel="shortcut icon" href="#" />
 </head>
 <body>
     <div class="container pb-4">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('ita.italianoMain') }}">L'inizio</a>
+                <a class="nav-link" href="{{ url_for('ita.italianoMain') }}"><i class="fas fa-home"></i> L'inizio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Scegli un altro verbo:</a>
+                <a class="nav-link" href="#"><i class="far fa-edit"></i> Scegli un altro verbo:</a>
               </li>
             </ul>
-                <form class="form-inline my-2 my-lg-0" method="POST" action="{{ url_for('ita.italianoAltroVerbo') }}" enctype="multipart/form-data">
-                   <select class="form-control mr-sm-2" id="verbo" name="verbo">
+                <form class="form-inline" method="POST" action="{{ url_for('ita.italianoAltroVerbo') }}" enctype="multipart/form-data">
+                  <select class="form-control mr-sm-2" id="verbo" name="verbo">
                     {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
                         {% if item == ilverbo[0].verbo %}
                             <option value="{{ item }}" selected>&nbsp; {{ item | capitalize }}</option>
@@ -46,8 +46,8 @@
       <div class="row row-cols-1">
         <div class="col">
           <h4 class="p-3 border bg-light">Verbo&nbsp; "{{ ilverbo[0].verbo|capitalize }}"</h4>
-            <button type="button" class="btn btn-outline-primary btn-lg btn-block">Controlla tutti</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg btn-block">Ricomincia tutti</button>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block" id="controllaTutti">Controlla tutti</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg btn-block" id="ricominciaTutti">Ricomincia tutti</button>
         </div>
       </div>
     </div>
@@ -98,11 +98,16 @@
     <script src="{{ url_for('static', filename='js/trapassatoRemoto.js') }}"></script>
     <script src="{{ url_for('static', filename='js/futuroSemplice.js') }}"></script>
     <script src="{{ url_for('static', filename='js/futuroAnteriore.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/controllaTutti.js') }}"></script>
     <!--    JS to the verbs ending     -->
 
     <!-- Bootstrap js 4.5.2 -->
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" async></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <!-- Font Awasome -->
     <script src="https://kit.fontawesome.com/7063f4dbe2.js" crossorigin="anonymous" async></script>
+
 </body>
 </html>

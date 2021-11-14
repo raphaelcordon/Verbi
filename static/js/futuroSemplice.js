@@ -1,4 +1,7 @@
 $(document).on('click', "#answerfuturoSemplice", function () {
+    runfuturoSemplice();
+});
+function runfuturoSemplice() {
 
     var exfuturoSempliceIo = document.getElementById('exfuturoSempliceIo').value;
     var exfuturoSempliceTu = document.getElementById('exfuturoSempliceTu').value;
@@ -54,7 +57,7 @@ $(document).on('click', "#answerfuturoSemplice", function () {
     }else{
         $('.CSSverbsAnswerfuturoSempliceLoro').attr('style', 'display: initial; color: red;');
     };
-  });
+  };
 
 // Cleaning the form
 $(document).on('click', "#ricominciafuturoSemplice", function () {

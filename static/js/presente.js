@@ -1,4 +1,7 @@
 $(document).on('click', "#answerPresente", function () {
+    runPresent();
+});
+function runPresent() {
 
     var exPresentIo = document.getElementById('exPresentIo').value;
     var exPresentTu = document.getElementById('exPresentTu').value;
@@ -54,7 +57,7 @@ $(document).on('click', "#answerPresente", function () {
     }else{
         $('.CSSverbsAnswerPresentLoro').attr('style', 'display: initial; color: red;');
     };
-  });
+  };
 
 // Cleaning the form
 $(document).on('click', "#ricominciaPresente", function () {

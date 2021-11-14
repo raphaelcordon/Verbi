@@ -1,4 +1,7 @@
 $(document).on('click', "#answerImperfetto", function () {
+    runImperfetto();
+});
+function runImperfetto() {
 
     var exImperfettoIo = document.getElementById('exImperfettoIo').value;
     var exImperfettoTu = document.getElementById('exImperfettoTu').value;
@@ -54,7 +57,7 @@ $(document).on('click', "#answerImperfetto", function () {
     }else{
         $('.CSSverbsAnswerImperfettoLoro').attr('style', 'display: initial; color: red;');
     };
-  });
+  };
 
 // Cleaning the form
 $(document).on('click', "#ricominciaImperfetto", function () {

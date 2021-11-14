@@ -1,4 +1,7 @@
 $(document).on('click', "#answerpassatoProssimo", function () {
+    runpassatoProssimo();
+});
+function runpassatoProssimo() {
 
     var expassatoProssimoIo = document.getElementById('expassatoProssimoIo').value;
     var expassatoProssimoTu = document.getElementById('expassatoProssimoTu').value;
@@ -54,7 +57,7 @@ $(document).on('click', "#answerpassatoProssimo", function () {
     }else{
         $('.CSSverbsAnswerpassatoProssimoLoro').attr('style', 'display: initial; color: red;');
     };
-  });
+  };
 
 // Cleaning the form
 $(document).on('click', "#ricominciapassatoProssimo", function () {

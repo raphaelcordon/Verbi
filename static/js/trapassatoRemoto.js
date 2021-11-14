@@ -1,4 +1,7 @@
 $(document).on('click', "#answertrapassatoRemoto", function () {
+    runtrapassatoRemoto();
+});
+function runtrapassatoRemoto() {
 
     var extrapassatoRemotoIo = document.getElementById('extrapassatoRemotoIo').value;
     var extrapassatoRemotoTu = document.getElementById('extrapassatoRemotoTu').value;
@@ -54,7 +57,7 @@ $(document).on('click', "#answertrapassatoRemoto", function () {
     }else{
         $('.CSSverbsAnswertrapassatoRemotoLoro').attr('style', 'display: initial; color: red;');
     };
-  });
+  };
 
 // Cleaning the form
 $(document).on('click', "#ricominciatrapassatoRemoto", function () {
