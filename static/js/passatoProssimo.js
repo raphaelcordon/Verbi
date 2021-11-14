@@ -55,3 +55,15 @@ $(document).on('click', "#answerpassatoProssimo", function () {
         $('.CSSverbsAnswerpassatoProssimoLoro').attr('style', 'display: initial; color: red;');
     };
   });
+
+// Cleaning the form
+$(document).on('click', "#ricominciapassatoProssimo", function () {
+    $('.CSSverbsAnswerpassatoProssimoIo').attr('style', 'display: none;');
+    $('.CSSverbsAnswerpassatoProssimoTu').attr('style', 'display: none;');
+    $('.CSSverbsAnswerpassatoProssimoLui').attr('style', 'display: none;');
+    $('.CSSverbsAnswerpassatoProssimoNoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswerpassatoProssimoVoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswerpassatoProssimoLoro').attr('style', 'display: none;');
+
+    document.getElementById('formpassatoProssimo').reset();
+});

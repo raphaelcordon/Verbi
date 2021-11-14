@@ -55,3 +55,15 @@ $(document).on('click', "#answerPresente", function () {
         $('.CSSverbsAnswerPresentLoro').attr('style', 'display: initial; color: red;');
     };
   });
+
+// Cleaning the form
+$(document).on('click', "#ricominciaPresente", function () {
+    $('.CSSverbsAnswerPresentIo').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresentTu').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresentLui').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresentNoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresentVoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresentLoro').attr('style', 'display: none;');
+
+    document.getElementById('formPresente').reset();
+});

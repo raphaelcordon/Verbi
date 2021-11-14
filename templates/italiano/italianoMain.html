@@ -238,15 +238,6 @@
                 </a>
                 {% endif %}
             {% endfor %}
-                <br>
-            <div>F:</div>
-            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
-                {% if item[0] == 'f' %}
-                <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
-                    <button type="button" class="btn btn-outline-secondary m-1">{{ item | capitalize }}</button>
-                </a>
-                {% endif %}
-            {% endfor %}
     </div>
 
 

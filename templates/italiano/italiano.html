@@ -10,29 +10,44 @@
     <link rel="shortcut icon" href="#" />
 </head>
 <body>
-    <br>
     <div class="container pb-4">
-        <form method="POST" action="{{ url_for('ita.italianoAltroVerbo') }}" enctype="multipart/form-data" >
-            <div class="form-group">
-                <label for="verbo">Example select</label>
-                <select class="form-control" id="verbo", name="verbo">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('ita.italianoMain') }}">L'inizio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Scegli un altro verbo:</a>
+              </li>
+            </ul>
+                <form class="form-inline my-2 my-lg-0" method="POST" action="{{ url_for('ita.italianoAltroVerbo') }}" enctype="multipart/form-data">
+                   <select class="form-control mr-sm-2" id="verbo" name="verbo">
                     {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
                         {% if item == ilverbo[0].verbo %}
-                            <option value="{{ item }}" selected>&nbsp;&nbsp; - {{ item | capitalize }}</option>
+                            <option value="{{ item }}" selected>&nbsp; {{ item | capitalize }}</option>
                         {% else %}
-                            <option value="{{ item }}">&nbsp;&nbsp; - {{ item | capitalize }}</option>
-                    {% endif %}
+                            <option value="{{ item }}">&nbsp; {{ item | capitalize }}</option>
+                        {% endif %}
                     {% endfor %}
-                </select>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+                    </select>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+          </div>
+        </nav>
     </div>
+
 
     <div class="container pb-4 text-center">
       <div class="row row-cols-1">
         <div class="col">
           <h4 class="p-3 border bg-light">Verbo&nbsp; "{{ ilverbo[0].verbo|capitalize }}"</h4>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block">Controlla tutti</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg btn-block">Ricomincia tutti</button>
         </div>
       </div>
     </div>
@@ -42,38 +57,26 @@
           <!-- ##### Partial Presente ##### -->
             {% include 'italiano/partials/presente.html' %}
 
-          <!-- ##### Partial Passato Prosimo ##### -->
+          <!-- ##### Partial Passato Prossimo ##### -->
             {% include 'italiano/partials/passatoProssimo.html' %}
-        <div class="col">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Imperfetto</div>
-            </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Trapassato prossimo</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Passato remoto</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Trapassato remoto</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Fururo semplice</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Futuro anteriore</div>
-          </div>
-        </div>
+
+          <!-- ##### Partial Imperfetto ##### -->
+            {% include 'italiano/partials/imperfetto.html' %}
+
+          <!-- ##### Partial Trapassato Prossimo ##### -->
+            {% include 'italiano/partials/trapassatoProssimo.html' %}
+
+          <!-- ##### Partial Passato Remoto ##### -->
+            {% include 'italiano/partials/passatoRemoto.html' %}
+
+          <!-- ##### Partial Passato Remoto ##### -->
+            {% include 'italiano/partials/trapassatoRemoto.html' %}
+
+          <!-- ##### Partial Futuro Semplice ##### -->
+            {% include 'italiano/partials/futuroSemplice.html' %}
+
+          <!-- ##### Partial Futuro Anteriore ##### -->
+            {% include 'italiano/partials/futuroAnteriore.html' %}
       </div>
     </div>
 
@@ -83,14 +86,23 @@
 
 
     <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="{{ url_for('static', filename='js/jquery/jquery-2.2.4.min.js') }}"></script>
-    <!-- Bootstrap js 4.5.2 -->
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- jQuery-3.6.0 js -->
+    <script src="{{ url_for('static', filename='js/jquery/jquery-3.6.0.min.js') }}"></script>
 
     <!--    JS to the verbs beginning   -->
     <script src="{{ url_for('static', filename='js/presente.js') }}"></script>
     <script src="{{ url_for('static', filename='js/passatoProssimo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/imperfetto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/trapassatoProssimo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/passatoRemoto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/trapassatoRemoto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/futuroSemplice.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/futuroAnteriore.js') }}"></script>
     <!--    JS to the verbs ending     -->
+
+    <!-- Bootstrap js 4.5.2 -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" async></script>
+    <!-- Font Awasome -->
+    <script src="https://kit.fontawesome.com/7063f4dbe2.js" crossorigin="anonymous" async></script>
 </body>
 </html>
