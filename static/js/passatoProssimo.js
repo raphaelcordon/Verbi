@@ -61,6 +61,9 @@ function runpassatoProssimo() {
 
 // Cleaning the form
 $(document).on('click', "#ricominciapassatoProssimo", function () {
+    cleanpassatoProssimo();
+});
+function cleanpassatoProssimo() {
     $('.CSSverbsAnswerpassatoProssimoIo').attr('style', 'display: none;');
     $('.CSSverbsAnswerpassatoProssimoTu').attr('style', 'display: none;');
     $('.CSSverbsAnswerpassatoProssimoLui').attr('style', 'display: none;');
@@ -69,4 +72,4 @@ $(document).on('click', "#ricominciapassatoProssimo", function () {
     $('.CSSverbsAnswerpassatoProssimoLoro').attr('style', 'display: none;');
 
     document.getElementById('formpassatoProssimo').reset();
-});
+};

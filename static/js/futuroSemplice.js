@@ -61,6 +61,9 @@ function runfuturoSemplice() {
 
 // Cleaning the form
 $(document).on('click', "#ricominciafuturoSemplice", function () {
+    cleanfuturoSemplice();
+});
+function cleanfuturoSemplice() {
     $('.CSSverbsAnswerfuturoSempliceIo').attr('style', 'display: none;');
     $('.CSSverbsAnswerfuturoSempliceTu').attr('style', 'display: none;');
     $('.CSSverbsAnswerfuturoSempliceLui').attr('style', 'display: none;');
@@ -69,4 +72,4 @@ $(document).on('click', "#ricominciafuturoSemplice", function () {
     $('.CSSverbsAnswerfuturoSempliceLoro').attr('style', 'display: none;');
 
     document.getElementById('formfuturoSemplice').reset();
-});
+};

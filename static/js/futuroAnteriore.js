@@ -61,6 +61,10 @@ function runfuturoAnteriore() {
 
 // Cleaning the form
 $(document).on('click', "#ricominciafuturoAnteriore", function () {
+    cleanfuturoAnteriore();
+});
+function cleanfuturoAnteriore() {
+
     $('.CSSverbsAnswerfuturoAnterioreIo').attr('style', 'display: none;');
     $('.CSSverbsAnswerfuturoAnterioreTu').attr('style', 'display: none;');
     $('.CSSverbsAnswerfuturoAnterioreLui').attr('style', 'display: none;');
@@ -69,4 +73,4 @@ $(document).on('click', "#ricominciafuturoAnteriore", function () {
     $('.CSSverbsAnswerfuturoAnterioreLoro').attr('style', 'display: none;');
 
     document.getElementById('formfuturoAnteriore').reset();
-});
+};

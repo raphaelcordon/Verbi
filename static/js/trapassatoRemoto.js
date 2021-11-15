@@ -61,6 +61,9 @@ function runtrapassatoRemoto() {
 
 // Cleaning the form
 $(document).on('click', "#ricominciatrapassatoRemoto", function () {
+    cleantrapassatoRemoto();
+});
+function cleantrapassatoRemoto() {
     $('.CSSverbsAnswertrapassatoRemotoIo').attr('style', 'display: none;');
     $('.CSSverbsAnswertrapassatoRemotoTu').attr('style', 'display: none;');
     $('.CSSverbsAnswertrapassatoRemotoLui').attr('style', 'display: none;');
@@ -69,4 +72,4 @@ $(document).on('click', "#ricominciatrapassatoRemoto", function () {
     $('.CSSverbsAnswertrapassatoRemotoLoro').attr('style', 'display: none;');
 
     document.getElementById('formtrapassatoRemoto').reset();
-});
+};

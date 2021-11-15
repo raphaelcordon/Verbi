@@ -6,49 +6,117 @@
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="presenteIo"> io </span>
-                              <input type="text" class="form-control" id="exPresentIo" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="PresenteIo"> io </span>
+                              <input type="text" class="form-control" id="exPresenteIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                <input type="text" class="form-control" value="{{ verbo.io }}" id="answerPresenteIo" hidden>
+                                <span class="CSSverbsAnswerPresenteIo">{{ verbo.io }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="presenteTu"> tu </span>
-                              <input type="text" class="form-control" id="exPresentTu" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="PresenteTu"> tu </span>
+                              <input type="text" class="form-control" id="exPresenteTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                    <input type="text" class="form-control" value="{{ verbo.tu }}" id="answerPresenteTu" hidden>
+                                    <span class="CSSverbsAnswerPresenteTu">{{ verbo.tu }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="presenteLui">lui</span>
-                              <input type="text" class="form-control" id="exPresentLui" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="PresenteLui">lui</span>
+                              <input type="text" class="form-control" id="exPresenteLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                <input type="text" class="form-control" value="{{ verbo.lui }}" id="answerPresenteLui" hidden>
+                                <span class="CSSverbsAnswerPresenteLui">{{ verbo.lui }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="presenteNoi">noi</span>
-                              <input type="text" class="form-control" id="exPresentNoi" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="PresenteNoi">noi</span>
+                              <input type="text" class="form-control" id="exPresenteNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                    <input type="text" class="form-control" value="{{ verbo.noi }}" id="answerPresenteNoi" hidden>
+                                    <span class="CSSverbsAnswerPresenteNoi">{{ verbo.noi }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="presenteVoi">voi</span>
-                              <input type="text" class="form-control" id="exPresentVoi" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="PresenteVoi">voi</span>
+                              <input type="text" class="form-control" id="exPresenteVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                <input type="text" class="form-control" value="{{ verbo.voi }}" id="answerPresenteVoi" hidden>
+                                <span class="CSSverbsAnswerPresenteVoi">{{ verbo.voi }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="presenteLoro">loro</span>
-                              <input type="text" class="form-control" id="exPresentLoro" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="PresenteLoro">loro</span>
+                              <input type="text" class="form-control" id="exPresenteLoro" oninput="this.value = this.value.toLowerCase()">
                           </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Presente' %}
+                                <input type="text" class="form-control" value="{{ verbo.loro }}" id="answerPresenteLoro" hidden>
+                                <span class="CSSverbsAnswerPresenteLoro">{{ verbo.loro }}</span>
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm mb-2">
+                          <button type="button" class="btn btn-outline-primary" id="answerPresente">Controlla</button>&nbsp;
+                          <button type="button" class="btn btn-outline-secondary" id="ricominciaPresente">Ricomincia</button>
+                      </div>
                       </td>
                   </tr>
               </table>

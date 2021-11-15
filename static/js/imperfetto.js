@@ -61,6 +61,9 @@ function runImperfetto() {
 
 // Cleaning the form
 $(document).on('click', "#ricominciaImperfetto", function () {
+    cleanImperfetto();
+});
+function cleanImperfetto() {
     $('.CSSverbsAnswerImperfettoIo').attr('style', 'display: none;');
     $('.CSSverbsAnswerImperfettoTu').attr('style', 'display: none;');
     $('.CSSverbsAnswerImperfettoLui').attr('style', 'display: none;');
@@ -69,4 +72,4 @@ $(document).on('click', "#ricominciaImperfetto", function () {
     $('.CSSverbsAnswerImperfettoLoro').attr('style', 'display: none;');
 
     document.getElementById('formImperfetto').reset();
-});
+};

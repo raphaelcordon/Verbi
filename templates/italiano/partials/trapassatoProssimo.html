@@ -10,12 +10,32 @@
                               <input type="text" class="form-control" id="extrapassatoProssimoIo" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Trapassato Prossimo' %}
+                                <input type="text" class="form-control" value="{{ verbo.io }}" id="answertrapassatoProssimoIo" hidden>
+                                <span class="CSSverbsAnswertrapassatoProssimoIo">{{ verbo.io }}</span>
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="trapassatoProssimoTu"> tu </span>
                               <input type="text" class="form-control" id="extrapassatoProssimoTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Trapassato Prossimo' %}
+                                    <input type="text" class="form-control" value="{{ verbo.tu }}" id="answertrapassatoProssimoTu" hidden>
+                                    <span class="CSSverbsAnswertrapassatoProssimoTu">{{ verbo.tu }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
@@ -26,12 +46,32 @@
                               <input type="text" class="form-control" id="extrapassatoProssimoLui" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Trapassato Prossimo' %}
+                                <input type="text" class="form-control" value="{{ verbo.lui }}" id="answertrapassatoProssimoLui" hidden>
+                                <span class="CSSverbsAnswertrapassatoProssimoLui">{{ verbo.lui }}</span>
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
                   </tr>
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
                               <span class="input-group-text" id="trapassatoProssimoNoi">noi</span>
                               <input type="text" class="form-control" id="extrapassatoProssimoNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Trapassato Prossimo' %}
+                                    <input type="text" class="form-control" value="{{ verbo.noi }}" id="answertrapassatoProssimoNoi" hidden>
+                                    <span class="CSSverbsAnswertrapassatoProssimoNoi">{{ verbo.noi }}</span>
+                                {% endif %}
+                              {% endfor %}
                           </div>
                       </td>
                   </tr>
@@ -42,6 +82,16 @@
                               <input type="text" class="form-control" id="extrapassatoProssimoVoi" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Trapassato Prossimo' %}
+                                <input type="text" class="form-control" value="{{ verbo.voi }}" id="answertrapassatoProssimoVoi" hidden>
+                                <span class="CSSverbsAnswertrapassatoProssimoVoi">{{ verbo.voi }}</span>
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
                   </tr>
                   <tr>
                       <td>
@@ -49,6 +99,24 @@
                               <span class="input-group-text" id="trapassatoProssimoLoro">loro</span>
                               <input type="text" class="form-control" id="extrapassatoProssimoLoro" oninput="this.value = this.value.toLowerCase()">
                           </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                {% if verbo.tempo == 'Trapassato Prossimo' %}
+                                <input type="text" class="form-control" value="{{ verbo.loro }}" id="answertrapassatoProssimoLoro" hidden>
+                                <span class="CSSverbsAnswertrapassatoProssimoLoro">{{ verbo.loro }}</span>
+                                {% endif %}
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm mb-2">
+                            <button type="button" class="btn btn-outline-primary" id="answertrapassatoProssimo">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciatrapassatoProssimo">Ricomincia</button>
+                      </div>
                       </td>
                   </tr>
               </table>

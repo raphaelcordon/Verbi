@@ -1,72 +1,75 @@
 $(document).on('click', "#answerPresente", function () {
-    runPresent();
+    runPresente();
 });
-function runPresent() {
+function runPresente() {
 
-    var exPresentIo = document.getElementById('exPresentIo').value;
-    var exPresentTu = document.getElementById('exPresentTu').value;
-    var exPresentLui = document.getElementById('exPresentLui').value;
-    var exPresentNoi = document.getElementById('exPresentNoi').value;
-    var exPresentVoi = document.getElementById('exPresentVoi').value;
-    var exPresentLoro = document.getElementById('exPresentLoro').value;
+    var exPresenteIo = document.getElementById('exPresenteIo').value;
+    var exPresenteTu = document.getElementById('exPresenteTu').value;
+    var exPresenteLui = document.getElementById('exPresenteLui').value;
+    var exPresenteNoi = document.getElementById('exPresenteNoi').value;
+    var exPresenteVoi = document.getElementById('exPresenteVoi').value;
+    var exPresenteLoro = document.getElementById('exPresenteLoro').value;
 
     //io
     var answerPresenteIo = document.getElementById('answerPresenteIo').value;
-    if (exPresentIo == answerPresenteIo){
-        $('.CSSverbsAnswerPresentIo').attr('style', 'display: initial; color: green;');
+    if (exPresenteIo == answerPresenteIo){
+        $('.CSSverbsAnswerPresenteIo').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswerPresentIo').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswerPresenteIo').attr('style', 'display: initial; color: red;');
     };
 
     //tu
     var answerPresenteTu = document.getElementById('answerPresenteTu').value;
-    if (exPresentTu == answerPresenteTu){
-        $('.CSSverbsAnswerPresentTu').attr('style', 'display: initial; color: green;');
+    if (exPresenteTu == answerPresenteTu){
+        $('.CSSverbsAnswerPresenteTu').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswerPresentTu').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswerPresenteTu').attr('style', 'display: initial; color: red;');
     };
 
     //lui
     var answerPresenteLui = document.getElementById('answerPresenteLui').value;
-    if (exPresentLui == answerPresenteLui){
-        $('.CSSverbsAnswerPresentLui').attr('style', 'display: initial; color: green;');
+    if (exPresenteLui == answerPresenteLui){
+        $('.CSSverbsAnswerPresenteLui').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswerPresentLui').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswerPresenteLui').attr('style', 'display: initial; color: red;');
     };
 
     //noi
     var answerPresenteNoi = document.getElementById('answerPresenteNoi').value;
-    if (exPresentNoi == answerPresenteNoi){
-        $('.CSSverbsAnswerPresentNoi').attr('style', 'display: initial; color: green;');
+    if (exPresenteNoi == answerPresenteNoi){
+        $('.CSSverbsAnswerPresenteNoi').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswerPresentNoi').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswerPresenteNoi').attr('style', 'display: initial; color: red;');
     };
 
     //voi
     var answerPresenteVoi = document.getElementById('answerPresenteVoi').value;
-    if (exPresentVoi == answerPresenteVoi){
-        $('.CSSverbsAnswerPresentVoi').attr('style', 'display: initial; color: green;');
+    if (exPresenteVoi == answerPresenteVoi){
+        $('.CSSverbsAnswerPresenteVoi').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswerPresentVoi').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswerPresenteVoi').attr('style', 'display: initial; color: red;');
     };
 
     //loro
     var answerPresenteLoro = document.getElementById('answerPresenteLoro').value;
-    if (exPresentLoro == answerPresenteLoro){
-        $('.CSSverbsAnswerPresentLoro').attr('style', 'display: initial; color: green;');
+    if (exPresenteLoro == answerPresenteLoro){
+        $('.CSSverbsAnswerPresenteLoro').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswerPresentLoro').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswerPresenteLoro').attr('style', 'display: initial; color: red;');
     };
   };
 
 // Cleaning the form
 $(document).on('click', "#ricominciaPresente", function () {
-    $('.CSSverbsAnswerPresentIo').attr('style', 'display: none;');
-    $('.CSSverbsAnswerPresentTu').attr('style', 'display: none;');
-    $('.CSSverbsAnswerPresentLui').attr('style', 'display: none;');
-    $('.CSSverbsAnswerPresentNoi').attr('style', 'display: none;');
-    $('.CSSverbsAnswerPresentVoi').attr('style', 'display: none;');
-    $('.CSSverbsAnswerPresentLoro').attr('style', 'display: none;');
+    cleanPresente();
+});
+function cleanPresente() {
+    $('.CSSverbsAnswerPresenteIo').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresenteTu').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresenteLui').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresenteNoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresenteVoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswerPresenteLoro').attr('style', 'display: none;');
 
     document.getElementById('formPresente').reset();
-});
+};
