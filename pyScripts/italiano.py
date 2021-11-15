@@ -7,7 +7,7 @@ ita = Blueprint('ita', __name__, url_prefix='')
 @ita.route('/italianoMain')
 def italianoMain():
     verbi = Repo().ListDistinctVerbs()
-    sequence = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+    sequence = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                 'u', 'v', 'w', 'x', 'y', 'z')
 
     return render_template('italiano/italianoMain.html', verbi=verbi, sequence=sequence)
