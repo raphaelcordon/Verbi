@@ -6,3 +6,15 @@
   background-size: cover;
   background-color: white;
 }
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+footer a {
+  color: white;
+}
+.logoFooter {
+    width: 65% !important;
+    height: 65% !important;
+}

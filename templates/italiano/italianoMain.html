@@ -11,8 +11,8 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="shortcut icon" href="#" />
 </head>
-<body class="bg">
-
+<body>
+<div class="bg">
     <br>
     <div class="container pb-4">
         <h2 class="text-center">Scegli un verbo</h2>
@@ -28,7 +28,9 @@
             <br>
         {% endfor %}
     </div>
-
+</div>
+<!-- ##### Partial Footer ##### -->
+{% include 'italiano/partials/footer.html' %}
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-3.6.0 js -->
     <script src="{{ url_for('static', filename='js/jquery/jquery-3.6.0.min.js') }}"></script>
