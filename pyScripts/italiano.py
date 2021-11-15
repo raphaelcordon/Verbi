@@ -28,3 +28,17 @@ def italianoAltroVerbo():
         ilverbo = Repo().FindByVerb(verbo)
 
         return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+
+
+@ita.route('/admitaliano')
+def admitaliano():
+
+    return render_template('italiano/admitaliano.html')
+
+
+@ita.route('/', methods=['GET', 'POST'])
+def italianoNovoVerbo():
+
+
+
+        return render_template('italiano/admitaliano.html')

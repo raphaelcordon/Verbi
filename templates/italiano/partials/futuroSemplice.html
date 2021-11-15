@@ -1,21 +1,21 @@
 <div class="col pt-1 pb-1">
           <div class="p-3 border bg-light">
-              <div class="text-center">Futuro Semplice</div>
-              <form id="formfuturoSemplice">
+              <div class="text-center">Trapassato Remoto</div>
+              <form id="formtrapassatoRemoto">
               <table class="table table-borderless p-0 m-0">
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="futuroSempliceIo"> io </span>
-                              <input type="text" class="form-control" id="exfuturoSempliceIo" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="trapassatoRemotoIo"> io </span>
+                              <input type="text" class="form-control" id="extrapassatoRemotoIo" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'Futuro Semplice' %}
-                                <input type="text" class="form-control" value="{{ verbo.io }}" id="answerfuturoSempliceIo" hidden>
-                                <span class="CSSverbsAnswerfuturoSempliceIo">{{ verbo.io }}</span>
+                                {% if verbo.tempo == 'Trapassato Remoto' %}
+                                <input type="text" class="form-control" value="{{ verbo.io }}" id="answertrapassatoRemotoIo" hidden>
+                                <span class="CSSverbsAnswertrapassatoRemotoIo">{{ verbo.io }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -24,16 +24,16 @@
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="futuroSempliceTu"> tu </span>
-                              <input type="text" class="form-control" id="exfuturoSempliceTu" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="trapassatoRemotoTu"> tu </span>
+                              <input type="text" class="form-control" id="extrapassatoRemotoTu" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'Futuro Semplice' %}
-                                    <input type="text" class="form-control" value="{{ verbo.tu }}" id="answerfuturoSempliceTu" hidden>
-                                    <span class="CSSverbsAnswerfuturoSempliceTu">{{ verbo.tu }}</span>
+                                {% if verbo.tempo == 'Trapassato Remoto' %}
+                                    <input type="text" class="form-control" value="{{ verbo.tu }}" id="answertrapassatoRemotoTu" hidden>
+                                    <span class="CSSverbsAnswertrapassatoRemotoTu">{{ verbo.tu }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -42,16 +42,16 @@
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="futuroSempliceLui">lui</span>
-                              <input type="text" class="form-control" id="exfuturoSempliceLui" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="trapassatoRemotoLui">lui</span>
+                              <input type="text" class="form-control" id="extrapassatoRemotoLui" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'Futuro Semplice' %}
-                                <input type="text" class="form-control" value="{{ verbo.lui }}" id="answerfuturoSempliceLui" hidden>
-                                <span class="CSSverbsAnswerfuturoSempliceLui">{{ verbo.lui }}</span>
+                                {% if verbo.tempo == 'Trapassato Remoto' %}
+                                <input type="text" class="form-control" value="{{ verbo.lui }}" id="answertrapassatoRemotoLui" hidden>
+                                <span class="CSSverbsAnswertrapassatoRemotoLui">{{ verbo.lui }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -60,16 +60,16 @@
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="futuroSempliceNoi">noi</span>
-                              <input type="text" class="form-control" id="exfuturoSempliceNoi" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="trapassatoRemotoNoi">noi</span>
+                              <input type="text" class="form-control" id="extrapassatoRemotoNoi" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'Futuro Semplice' %}
-                                    <input type="text" class="form-control" value="{{ verbo.noi }}" id="answerfuturoSempliceNoi" hidden>
-                                    <span class="CSSverbsAnswerfuturoSempliceNoi">{{ verbo.noi }}</span>
+                                {% if verbo.tempo == 'Trapassato Remoto' %}
+                                    <input type="text" class="form-control" value="{{ verbo.noi }}" id="answertrapassatoRemotoNoi" hidden>
+                                    <span class="CSSverbsAnswertrapassatoRemotoNoi">{{ verbo.noi }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -78,16 +78,16 @@
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="futuroSempliceVoi">voi</span>
-                              <input type="text" class="form-control" id="exfuturoSempliceVoi" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="trapassatoRemotoVoi">voi</span>
+                              <input type="text" class="form-control" id="extrapassatoRemotoVoi" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'Futuro Semplice' %}
-                                <input type="text" class="form-control" value="{{ verbo.voi }}" id="answerfuturoSempliceVoi" hidden>
-                                <span class="CSSverbsAnswerfuturoSempliceVoi">{{ verbo.voi }}</span>
+                                {% if verbo.tempo == 'Trapassato Remoto' %}
+                                <input type="text" class="form-control" value="{{ verbo.voi }}" id="answertrapassatoRemotoVoi" hidden>
+                                <span class="CSSverbsAnswertrapassatoRemotoVoi">{{ verbo.voi }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -96,16 +96,16 @@
                   <tr>
                       <td>
                           <div class="input-group input-group-sm mb-2">
-                              <span class="input-group-text" id="futuroSempliceLoro">loro</span>
-                              <input type="text" class="form-control" id="exfuturoSempliceLoro" oninput="this.value = this.value.toLowerCase()">
+                              <span class="input-group-text" id="trapassatoRemotoLoro">loro</span>
+                              <input type="text" class="form-control" id="extrapassatoRemotoLoro" oninput="this.value = this.value.toLowerCase()">
                           </div>
                       </td>
                       <td>
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'Futuro Semplice' %}
-                                <input type="text" class="form-control" value="{{ verbo.loro }}" id="answerfuturoSempliceLoro" hidden>
-                                <span class="CSSverbsAnswerfuturoSempliceLoro">{{ verbo.loro }}</span>
+                                {% if verbo.tempo == 'Trapassato Remoto' %}
+                                <input type="text" class="form-control" value="{{ verbo.loro }}" id="answertrapassatoRemotoLoro" hidden>
+                                <span class="CSSverbsAnswertrapassatoRemotoLoro">{{ verbo.loro }}</span>
                                 {% endif %}
                               {% endfor %}
                           </div>
@@ -114,8 +114,8 @@
                   <tr>
                       <td colspan="2" class="text-center">
                         <div class="input-group input-group-sm mb-2">
-                            <button type="button" class="btn btn-outline-primary" id="answerfuturoSemplice">Controlla</button>&nbsp;
-                            <button type="button" class="btn btn-outline-secondary" id="ricominciafuturoSemplice">Ricomincia</button>
+                            <button type="button" class="btn btn-outline-primary" id="answertrapassatoRemoto">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciatrapassatoRemoto">Ricomincia</button>
                       </div>
                       </td>
                   </tr>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Italiano</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+
+    <link rel="shortcut icon" href="#" />
+</head>
+<body>
+<form class="form-inline" method="POST" action="{{ url_for('ita.italianoNovoVerbo') }}" enctype="multipart/form-data">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+
+          <table class="table table-borderless p-0 m-0">
+              <tr>
+                  <td>
+                      <div class="input-group input-group-sm mb-2">
+                          <span class="input-group-text"> Verbo </span>
+                          <input type="text" class="form-control" id="verbo" oninput="this.value = this.value.toLowerCase()">
+                      </div>
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
+                  </td>
+              </tr>
+          </table>
+
+          <!-- ##### Partial Presente ##### -->
+            {% include 'italiano/partials/adm/presente.html' %}
+
+          <!-- ##### Partial Passato Prossimo ##### -->
+            {% include 'italiano/partials/adm/passatoProssimo.html' %}
+
+          <!-- ##### Partial Imperfetto ##### -->
+            {% include 'italiano/partials/adm/imperfetto.html' %}
+
+          <!-- ##### Partial Trapassato Prossimo ##### -->
+            {% include 'italiano/partials/adm/trapassatoProssimo.html' %}
+
+          <!-- ##### Partial Passato Remoto ##### -->
+            {% include 'italiano/partials/adm/passatoRemoto.html' %}
+
+          <!-- ##### Partial Passato Remoto ##### -->
+            {% include 'italiano/partials/adm/trapassatoRemoto.html' %}
+
+          <!-- ##### Partial Futuro Semplice ##### -->
+            {% include 'italiano/partials/adm/futuroSemplice.html' %}
+
+          <!-- ##### Partial Futuro Anteriore ##### -->
+            {% include 'italiano/partials/adm/futuroAnteriore.html' %}
+         </div>
+
+    </div>
+
+</form>
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-3.6.0 js -->
+    <script src="{{ url_for('static', filename='js/jquery/jquery-3.6.0.min.js') }}"></script>
+
+    <!--    JS to the verbs beginning   -->
+    <script src="{{ url_for('static', filename='js/presente.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/passatoProssimo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/imperfetto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/trapassatoProssimo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/passatoRemoto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/trapassatoRemoto.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/futuroSemplice.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/futuroAnteriore.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/controllaTutti.js') }}"></script>
+    <!--    JS to the verbs ending     -->
+
+    <!-- Bootstrap js 4.5.2 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Font Awasome -->
+    <script src="https://kit.fontawesome.com/7063f4dbe2.js" crossorigin="anonymous" async></script>
+
+</body>
+</html>
