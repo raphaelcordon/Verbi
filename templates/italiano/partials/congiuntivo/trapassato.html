@@ -1,0 +1,113 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Trapassato</div>
+              <form id="formcongiuntivoTrapassato">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoTrapassatoIo"> io </span>
+                              <input type="text" class="form-control" id="excongiuntivoTrapassatoIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoTrapassatoIo }}" id="answercongiuntivoTrapassatoIo" hidden>
+                                <span class="CSSverbsAnswercongiuntivoTrapassatoIo">{{ verbo.congiuntivoTrapassatoIo }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoTrapassatoTu"> tu </span>
+                              <input type="text" class="form-control" id="excongiuntivoTrapassatoTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.congiuntivoTrapassatoTu }}" id="answercongiuntivoTrapassatoTu" hidden>
+                                    <span class="CSSverbsAnswercongiuntivoTrapassatoTu">{{ verbo.congiuntivoTrapassatoTu }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoTrapassatoLui">lui</span>
+                              <input type="text" class="form-control" id="excongiuntivoTrapassatoLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoTrapassatoLui }}" id="answercongiuntivoTrapassatoLui" hidden>
+                                <span class="CSSverbsAnswercongiuntivoTrapassatoLui">{{ verbo.congiuntivoTrapassatoLui }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoTrapassatoNoi">noi</span>
+                              <input type="text" class="form-control" id="excongiuntivoTrapassatoNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.congiuntivoTrapassatoNoi }}" id="answercongiuntivoTrapassatoNoi" hidden>
+                                    <span class="CSSverbsAnswercongiuntivoTrapassatoNoi">{{ verbo.congiuntivoTrapassatoNoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoTrapassatoVoi">voi</span>
+                              <input type="text" class="form-control" id="excongiuntivoTrapassatoVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoTrapassatoVoi }}" id="answercongiuntivoTrapassatoVoi" hidden>
+                                <span class="CSSverbsAnswercongiuntivoTrapassatoVoi">{{ verbo.congiuntivoTrapassatoVoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoTrapassatoLoro">loro</span>
+                              <input type="text" class="form-control" id="excongiuntivoTrapassatoLoro" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoTrapassatoLoro }}" id="answercongiuntivoTrapassatoLoro" hidden>
+                                <span class="CSSverbsAnswercongiuntivoTrapassatoLoro">{{ verbo.congiuntivoTrapassatoLoro }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                            <button type="button" class="btn btn-outline-primary" id="answercongiuntivoTrapassato">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciacongiuntivoTrapassato">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>

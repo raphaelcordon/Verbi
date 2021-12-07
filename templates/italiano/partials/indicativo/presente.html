@@ -1,0 +1,113 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Presente</div>
+              <form id="formindicativoPresente">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoPresenteIo"> io </span>
+                              <input type="text" class="form-control" id="exindicativoPresenteIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoPresenteIo }}" id="answerindicativoPresenteIo" hidden>
+                                <span class="CSSverbsAnswerindicativoPresenteIo">{{ verbo.indicativoPresenteIo }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoPresenteTu"> tu </span>
+                              <input type="text" class="form-control" id="exindicativoPresenteTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.indicativoPresenteTu }}" id="answerindicativoPresenteTu" hidden>
+                                    <span class="CSSverbsAnswerindicativoPresenteTu">{{ verbo.indicativoPresenteTu }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoPresenteLui">lui</span>
+                              <input type="text" class="form-control" id="exindicativoPresenteLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoPresenteLui }}" id="answerindicativoPresenteLui" hidden>
+                                <span class="CSSverbsAnswerindicativoPresenteLui">{{ verbo.indicativoPresenteLui }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoPresenteNoi">noi</span>
+                              <input type="text" class="form-control" id="exindicativoPresenteNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.indicativoPresenteNoi }}" id="answerindicativoPresenteNoi" hidden>
+                                    <span class="CSSverbsAnswerindicativoPresenteNoi">{{ verbo.indicativoPresenteNoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoPresenteVoi">voi</span>
+                              <input type="text" class="form-control" id="exindicativoPresenteVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoPresenteVoi }}" id="answerindicativoPresenteVoi" hidden>
+                                <span class="CSSverbsAnswerindicativoPresenteVoi">{{ verbo.indicativoPresenteVoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoPresenteLoro">loro</span>
+                              <input type="text" class="form-control" id="exindicativoPresenteLoro" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoPresenteLoro }}" id="answerindicativoPresenteLoro" hidden>
+                                <span class="CSSverbsAnswerindicativoPresenteLoro">{{ verbo.indicativoPresenteLoro }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                          <button type="button" class="btn btn-outline-primary" id="answerindicativoPresente">Controlla</button>&nbsp;
+                          <button type="button" class="btn btn-outline-secondary" id="ricominciaindicativoPresente">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>

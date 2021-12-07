@@ -1,12 +1,15 @@
 from flask import render_template, session, redirect, url_for, Blueprint, Response, request
 from repository.italiano_repos import ItalianoRepository as Repo
+from repository.verbi_repos import VerbiRepository as VerbiRepo
+from thirdparty.api import ApiUltralingua
 
 ita = Blueprint('ita', __name__, url_prefix='')
 
 
 @ita.route('/italianoMain')
 def italianoMain():
-    verbi = Repo().ListDistinctVerbs()
+    verbi = VerbiRepo().ListDistinctVerbs()
+
     sequence = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                 'u', 'v', 'w', 'x', 'y', 'z')
 
@@ -16,20 +19,25 @@ def italianoMain():
 @ita.route('/italiano/<verbo>/', methods=['GET', 'POST'])
 def italianoVerbo(verbo):
 
-        verbi = Repo().ListDistinctVerbs()
-        ilverbo = Repo().FindByVerb(verbo)
+    ilverbo = VerbiRepo().FindByVerb(verbo)
+    verbi = VerbiRepo().ListDistinctVerbs()
 
-        return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+    return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
 
 
 @ita.route('/', methods=['GET', 'POST'])
 def italianoAltroVerbo():
 
-        verbo = str(request.form['verbo']).lower()
-        verbi = Repo().ListDistinctVerbs()
-        ilverbo = Repo().FindByVerb(verbo)
+    verbo = str(request.form['verbo']).lower().strip()
+    verbi = VerbiRepo().ListDistinctVerbs()
+    tryVerbo = VerbiRepo().FindByVerb(verbo)
+    if tryVerbo:
+        ilverbo = tryVerbo
+    else:
+        ApiUltralingua(verbo)
+        ilverbo = VerbiRepo().FindByVerb(verbo)
 
-        return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+    return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
 
 
 @ita.route('/admitaliano')
@@ -41,6 +49,11 @@ def admitaliano():
 @ita.route('/', methods=['GET', 'POST'])
 def italianoNovoVerbo():
 
+    return render_template('italiano/admitaliano.html')
 
 
-        return render_template('italiano/admitaliano.html')
+@ita.route('/testVerbi/', methods=['GET', 'POST'])
+def testVerbi():
+
+    verbi = VerbiRepo().List()
+    return render_template('italiano/Testitaliano.html', verbi=verbi)

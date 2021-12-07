@@ -5,4 +5,11 @@
 @import url(css/bootstrap.min.css);
 @import url(css/bootstrap.css.map);
 @import url(css/bootstrap.min.css.map);
-@import url(css/verbsItalianCorrections.css);
+
+@import url(css/verbsItalianCorrectionsIndicativo.css);
+@import url(css/verbsItalianCorrectionsCongiuntivo.css);
+/* @import url(css/verbsItalianCorrectionsCondizionale.css);*/
+@import url(css/verbsItalianCorrectionsImperativo.css);
+@import url(css/verbsItalianCorrectionsInfinitivo.css);
+@import url(css/verbsItalianCorrectionsParticipio.css);
+@import url(css/verbsItalianCorrectionsGerundio.css);

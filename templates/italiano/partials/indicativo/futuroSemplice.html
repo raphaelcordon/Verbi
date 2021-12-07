@@ -1,0 +1,113 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Futuro Semplice</div>
+              <form id="formindicativoFuturoSemplice">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoSempliceIo"> io </span>
+                              <input type="text" class="form-control" id="exindicativoFuturoSempliceIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoSempliceIo }}" id="answerindicativoFuturoSempliceIo" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoSempliceIo">{{ verbo.indicativoFuturoSempliceIo }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoSempliceTu"> tu </span>
+                              <input type="text" class="form-control" id="exindicativoFuturoSempliceTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.indicativoFuturoSempliceTu }}" id="answerindicativoFuturoSempliceTu" hidden>
+                                    <span class="CSSverbsAnswerindicativoFuturoSempliceTu">{{ verbo.indicativoFuturoSempliceTu }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoSempliceLui">lui</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoSempliceLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoSempliceLui }}" id="answerindicativoFuturoSempliceLui" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoSempliceLui">{{ verbo.indicativoFuturoSempliceLui }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoSempliceNoi">noi</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoSempliceNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.indicativoFuturoSempliceNoi }}" id="answerindicativoFuturoSempliceNoi" hidden>
+                                    <span class="CSSverbsAnswerindicativoFuturoSempliceNoi">{{ verbo.indicativoFuturoSempliceNoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoSempliceVoi">voi</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoSempliceVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoSempliceVoi }}" id="answerindicativoFuturoSempliceVoi" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoSempliceVoi">{{ verbo.indicativoFuturoSempliceVoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoSempliceLoro">loro</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoSempliceLoro" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoSempliceLoro }}" id="answerindicativoFuturoSempliceLoro" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoSempliceLoro">{{ verbo.indicativoFuturoSempliceLoro }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                            <button type="button" class="btn btn-outline-primary" id="answerindicativoFuturoSemplice">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciaindicativoFuturoSemplice">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>

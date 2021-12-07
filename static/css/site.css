@@ -1,3 +1,4 @@
+/*  BACKGROUND  */
 .bg { 
   background: url(../image/pexels-gizem-7939051.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -16,11 +17,21 @@
   background-color: white;
 }
 
-.centered {
+/*  ALL THE PAGES  */
+
+  /*  Transparent backgroung to Verbs DIV  */
+  .bgTransparentVerbs {
+    background-color: rgba(200, 200, 200, 0.3);
+  }
+
+/* .centered { 
   position: fixed; /* or absolute */
-  top: 50%;
+/* top: 50%;
   left: 50%;
-}
+} */
+
+
+/*  FOOTER  */
 
 footer {
   text-align: center;
