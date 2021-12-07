@@ -1,5 +1,4 @@
-from flask import render_template, session, redirect, url_for, Blueprint, Response, request
-from repository.italiano_repos import ItalianoRepository as Repo
+from flask import render_template, Blueprint, request
 from repository.verbi_repos import VerbiRepository as VerbiRepo
 from thirdparty.api import ApiUltralingua
 

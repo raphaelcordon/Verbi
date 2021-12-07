@@ -1,5 +1,5 @@
 from .base_repos import PostgreDB
-from models.italiano_model import Italiano, ItalianoOneVerb, Verbi
+from models.italiano_model import ItalianoOneVerb, Verbi
 
 
 class VerbiRepository:
