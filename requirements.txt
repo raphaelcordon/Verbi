@@ -7,4 +7,4 @@ jinja2==3.0.1
 locket==0.2.0
 psycopg2-binary==2.8.5
 PyMySQL==0.10.0
-
+passlib==1.7.2
