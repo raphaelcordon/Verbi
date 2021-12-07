@@ -9,4 +9,4 @@ app.register_blueprint(ind)
 app.register_blueprint(ita)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
