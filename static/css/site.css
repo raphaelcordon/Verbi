@@ -45,3 +45,18 @@ footer a {
     width: 65% !important;
     height: 65% !important;
 }
+
+/*  EFFECTS TO THE VERB PAGE  */
+
+#shineVerb {
+  background-color: rgb(248, 249, 250);
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  from {background-color: rgb(0, 89, 255);}
+  to {background-color: rgb(248, 249, 250);}
+  from {color: white;}
+  to {color: black;}
+}
