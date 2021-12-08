@@ -5,5 +5,5 @@ gunicorn==20.0.4
 html5lib==1.1
 jinja2==3.0.3
 locket==0.2.1
-psycopg2-binary==2.9.2
+
 passlib==1.7.4
