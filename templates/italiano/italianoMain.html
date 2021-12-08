@@ -4,7 +4,7 @@
     <!-- ##### Partial Top Menu #####-->
     {% include 'italiano/partials/topMenu.html' %}
     <div class="container">
-        <h2 class="text-center">Scegli un verbo</h2>
+        <h2 class="text-center">Verbi più popolari, in ordine alfabetico:</h2>
         {% for letter in sequence %}
 
             {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
