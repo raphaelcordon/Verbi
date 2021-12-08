@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, request
+from flask import render_template, Blueprint, request, flash, redirect, url_for
 from repository.verbi_repos import VerbiRepository as VerbiRepo
 from thirdparty.api import ApiUltralingua
 
@@ -29,14 +29,17 @@ def italianoAltroVerbo():
 
     verbo = str(request.form['verbo']).lower().strip()
     verbi = VerbiRepo().ListDistinctVerbs()
-    tryVerbo = VerbiRepo().FindByVerb(verbo)
-    if tryVerbo:
-        ilverbo = tryVerbo
-    else:
-        ApiUltralingua(verbo)
+    if VerbiRepo().FindByVerb(verbo):
         ilverbo = VerbiRepo().FindByVerb(verbo)
-
-    return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+        return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+    else:
+        try:
+            ApiUltralingua(verbo)
+            ilverbo = VerbiRepo().FindByVerb(verbo)
+            return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+        except:
+            flash(f'Verbo non trovato, trovane un altro', 'danger')
+            return redirect(url_for('ita.italianoMain'))
 
 
 @ita.route('/admitaliano')
@@ -49,10 +52,3 @@ def admitaliano():
 def italianoNovoVerbo():
 
     return render_template('italiano/admitaliano.html')
-
-
-@ita.route('/testVerbi/', methods=['GET', 'POST'])
-def testVerbi():
-
-    verbi = VerbiRepo().List()
-    return render_template('italiano/Testitaliano.html', verbi=verbi)

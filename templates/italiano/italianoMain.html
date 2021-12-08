@@ -1,7 +1,8 @@
 {% include 'italiano/base.html' %}
 <body>
 <div class="bg">
-    <br>
+    <!-- ##### Partial Top Menu #####-->
+    {% include 'italiano/partials/topMenu.html' %}
     <div class="container">
         <h2 class="text-center">Scegli un verbo</h2>
         {% for letter in sequence %}
