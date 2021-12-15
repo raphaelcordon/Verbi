@@ -1,0 +1,113 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Futuro Anteriore</div>
+              <form id="formindicativoFuturoAnteriore">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoAnterioreIo"> io </span>
+                              <input type="text" class="form-control" id="exindicativoFuturoAnterioreIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoAnterioreIo }}" id="answerindicativoFuturoAnterioreIo" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoAnterioreIo">{{ verbo.indicativoFuturoAnterioreIo }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoAnterioreTu"> tu </span>
+                              <input type="text" class="form-control" id="exindicativoFuturoAnterioreTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.indicativoFuturoAnterioreTu }}" id="answerindicativoFuturoAnterioreTu" hidden>
+                                    <span class="CSSverbsAnswerindicativoFuturoAnterioreTu">{{ verbo.indicativoFuturoAnterioreTu }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoAnterioreLui">lui</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoAnterioreLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoAnterioreLui }}" id="answerindicativoFuturoAnterioreLui" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoAnterioreLui">{{ verbo.indicativoFuturoAnterioreLui }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoAnterioreNoi">noi</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoAnterioreNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.indicativoFuturoAnterioreNoi }}" id="answerindicativoFuturoAnterioreNoi" hidden>
+                                    <span class="CSSverbsAnswerindicativoFuturoAnterioreNoi">{{ verbo.indicativoFuturoAnterioreNoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoAnterioreVoi">voi</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoAnterioreVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoAnterioreVoi }}" id="answerindicativoFuturoAnterioreVoi" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoAnterioreVoi">{{ verbo.indicativoFuturoAnterioreVoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="indicativoFuturoAnterioreLoro">loro</span>
+                              <input type="text" class="form-control" id="exindicativoFuturoAnterioreLoro" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.indicativoFuturoAnterioreLoro }}" id="answerindicativoFuturoAnterioreLoro" hidden>
+                                <span class="CSSverbsAnswerindicativoFuturoAnterioreLoro">{{ verbo.indicativoFuturoAnterioreLoro }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                            <button type="button" class="btn btn-outline-primary" id="answerindicativoFuturoAnteriore">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciaindicativoFuturoAnteriore">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>

@@ -11,3 +11,13 @@ CREATE TABLE IF NOT EXISTS public."italiano" (
 						);
 
 INSERT INTO public.italiano (verbo = "", tempo = "", io = "", tu = "", lui = "", noi = "", voi = "", loro = ""
+
+
+CREATE TABLE IF NOT EXISTS public."users" (
+						ID serial PRIMARY KEY,
+						name VARCHAR(50),
+						surname VARCHAR(50),
+						password VARCHAR(250),
+						email VARCHAR(50),
+						changepass bool
+						);

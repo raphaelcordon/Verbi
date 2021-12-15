@@ -1,0 +1,31 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Presente</div>
+              <form id="formInfinitivo">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <input type="text" class="form-control" id="exInfinitivoPresente" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.infinitivoPresente }}" id="answerInfinitivoPresente" hidden>
+                                <span class="CSSverbsAnswerInfinitivoPresente">{{ verbo.infinitivoPresente }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                          <button type="button" class="btn btn-outline-primary" id="answerInfinitivo">Controlla</button>&nbsp;
+                          <button type="button" class="btn btn-outline-secondary" id="ricominciaInfinitivo">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>

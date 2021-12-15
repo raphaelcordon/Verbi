@@ -1,0 +1,160 @@
+{% include 'italiano/base.html' %}
+<body>
+<div class="bg">
+    <!-- ##### Partial Top Menu #####-->
+    {% include 'italiano/partials/topMenu.html' %}
+
+    <!-- Main Buttons controlling all -->
+    <div class="container pb-4 text-center">
+      <div class="row row-cols-1">
+        <div class="col">
+          <h4 class="p-3 border"   id="shineVerb">Verbo&nbsp; "{% for item in ilverbo %}{{ item.infinitivoPresente|capitalize }}{% endfor %}"</h4>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block" id="controllaTutti">Controlla tutti</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg btn-block" id="ricominciaTutti">Ricomincia tutti</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verbs INDICATIVO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>INDICATIVO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Presente ##### -->
+                {% include 'italiano/partials/indicativo/presente.html' %}
+
+              <!-- ##### Partial Passato Prossimo ##### -->
+                {% include 'italiano/partials/indicativo/passatoProssimo.html' %}
+
+              <!-- ##### Partial Imperfetto ##### -->
+                {% include 'italiano/partials/indicativo/imperfetto.html' %}
+
+              <!-- ##### Partial Trapassato Prossimo ##### -->
+                {% include 'italiano/partials/indicativo/trapassatoProssimo.html' %}
+
+              <!-- ##### Partial Passato Remoto ##### -->
+                {% include 'italiano/partials/indicativo/passatoRemoto.html' %}
+
+              <!-- ##### Partial Passato Remoto ##### -->
+                {% include 'italiano/partials/indicativo/trapassatoRemoto.html' %}
+
+              <!-- ##### Partial Futuro Semplice ##### -->
+                {% include 'italiano/partials/indicativo/futuroSemplice.html' %}
+
+              <!-- ##### Partial Futuro Anteriore ##### -->
+                {% include 'italiano/partials/indicativo/futuroAnteriore.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs CONGIUNTIVO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>CONGIUNTIVO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Presente ##### -->
+                {% include 'italiano/partials/congiuntivo/presente.html' %}
+
+              <!-- ##### Partial Passato ##### -->
+                {% include 'italiano/partials/congiuntivo/passato.html' %}
+
+              <!-- ##### Partial Imperfetto ##### -->
+                {% include 'italiano/partials/congiuntivo/imperfetto.html' %}
+
+              <!-- ##### Partial Trapassato ##### -->
+                {% include 'italiano/partials/congiuntivo/trapassato.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs IMPERATIVO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>Imperativo</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Imperativo ##### -->
+                {% include 'italiano/partials/imperativo/presente.html' %}
+          </div>
+      </div>
+    </div>
+    ------
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs INFINITO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>INFINITO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Infinito ##### -->
+                {% include 'italiano/partials/infinitivo/presente.html' %}
+
+              <!-- ##### Partial Infinito Passato ##### -->
+                {% include 'italiano/partials/infinitivo/passato.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs PARTICIPIO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>PARTICIPIO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Participio ##### -->
+                {% include 'italiano/partials/participio/presente.html' %}
+
+              <!-- ##### Partial Passato ##### -->
+                {% include 'italiano/partials/participio/passato.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs GERUNDIO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>GERUNDIO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Presente ##### -->
+                {% include 'italiano/partials/gerundio/presente.html' %}
+
+              <!-- ##### Partial Passato ##### -->
+                {% include 'italiano/partials/gerundio/passato.html' %}
+          </div>
+      </div>
+    </div>
+
+</div>
+<!-- ##### Partial Footer ##### -->
+{% include 'italiano/partials/footer.html' %}
+
+
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-3.6.0 js -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery/jquery-3.6.0.min.js') }}"></script>
+    <!-- Bootstrap js 4.5.2 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/controllaTutti.js') }}"></script>
+    <!--    JS to the verbs ending     -->
+    <!-- Font Awasome -->
+    <script type="text/javascript" src="https://kit.fontawesome.com/7063f4dbe2.js" crossorigin="anonymous" async></script>
+</body>
+</html>

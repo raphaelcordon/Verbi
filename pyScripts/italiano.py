@@ -40,15 +40,3 @@ def italianoAltroVerbo():
         except:
             flash(f'Verbo non trovato, trovane un altro', 'danger')
             return redirect(url_for('ita.italianoMain'))
-
-
-@ita.route('/admitaliano')
-def admitaliano():
-
-    return render_template('italiano/admitaliano.html')
-
-
-@ita.route('/', methods=['GET', 'POST'])
-def italianoNovoVerbo():
-
-    return render_template('italiano/admitaliano.html')

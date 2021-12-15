@@ -1,0 +1,113 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Presente</div>
+              <form id="formcongiuntivoPresente">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoPresenteIo"> io </span>
+                              <input type="text" class="form-control" id="excongiuntivoPresenteIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoPresenteIo }}" id="answercongiuntivoPresenteIo" hidden>
+                                <span class="CSSverbsAnswercongiuntivoPresenteIo">{{ verbo.congiuntivoPresenteIo }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoPresenteTu"> tu </span>
+                              <input type="text" class="form-control" id="excongiuntivoPresenteTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.congiuntivoPresenteTu }}" id="answercongiuntivoPresenteTu" hidden>
+                                    <span class="CSSverbsAnswercongiuntivoPresenteTu">{{ verbo.congiuntivoPresenteTu }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoPresenteLui">lui</span>
+                              <input type="text" class="form-control" id="excongiuntivoPresenteLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoPresenteLui }}" id="answercongiuntivoPresenteLui" hidden>
+                                <span class="CSSverbsAnswercongiuntivoPresenteLui">{{ verbo.congiuntivoPresenteLui }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoPresenteNoi">noi</span>
+                              <input type="text" class="form-control" id="excongiuntivoPresenteNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.congiuntivoPresenteNoi }}" id="answercongiuntivoPresenteNoi" hidden>
+                                    <span class="CSSverbsAnswercongiuntivoPresenteNoi">{{ verbo.congiuntivoPresenteNoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoPresenteVoi">voi</span>
+                              <input type="text" class="form-control" id="excongiuntivoPresenteVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoPresenteVoi }}" id="answercongiuntivoPresenteVoi" hidden>
+                                <span class="CSSverbsAnswercongiuntivoPresenteVoi">{{ verbo.congiuntivoPresenteVoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="congiuntivoPresenteLoro">loro</span>
+                              <input type="text" class="form-control" id="excongiuntivoPresenteLoro" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.congiuntivoPresenteLoro }}" id="answercongiuntivoPresenteLoro" hidden>
+                                <span class="CSSverbsAnswercongiuntivoPresenteLoro">{{ verbo.congiuntivoPresenteLoro }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                          <button type="button" class="btn btn-outline-primary" id="answercongiuntivoPresente">Controlla</button>&nbsp;
+                          <button type="button" class="btn btn-outline-secondary" id="ricominciacongiuntivoPresente">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>
