@@ -1,20 +1,31 @@
 {% include 'italiano/base.html' %}
 <body class="bgIndex">
     <div class="container text-center p-4">
-        <div><br><br></div>
+        <div><img src="{{ url_for('static', filename='image/logo.png') }}"></div>
         <article class="container">
             <div class="row">
                 <div class="col-sm">
-                    <h4><b>Ciao ragazzi, benvenuti a tutti!</b></h4>
-                    <br>
-                    <h5>Questa pagina è stata creata per te che, come me, stai studiando l'italiano e hai bisogno di esercitarti con i verbi in diversi tempi verbali.</h5>
-                    <br>
-                    <h6>Spero di poterti semplificare un po' la vita, promuovere il sito e buoni studi!</h6>
+                    <table class="table">
+                        <tr>
+                            <td class="text-right align-middle"><a href="{{ url_for('ita.italianoMain') }}">
+                                <img src="{{ url_for('static', filename='image/flags/italy.png') }}" height="30%" width="30%"></a></td>
+                            <td class="text-left align-middle"><a href="{{ url_for('ita.italianoMain') }}">
+                                <button class="btn btn-secondary" type="button">Vieni a fare pratica</button></a></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right align-middle"><img src="{{ url_for('static', filename='image/flags/ukConstruction.png') }}" height="30%" width="30%"></td>
+                            <td class="text-left align-middle"><button class="btn btn-secondary" type="button"> Under construction</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right align-middle"><img src="{{ url_for('static', filename='image/flags/spanish.png') }}" height="30%" width="30%"></td>
+                            <td class="text-left align-middle"><button class="btn btn-secondary" type="button">&nbsp;&nbsp; En el futuro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </article>
         <br>
-          <a href="{{ url_for('ita.italianoMain') }}"><button class="btn btn-secondary btn-lg btn-block" type="button">Vieni a fare pratica</button></a>
+
     </div>
 
     <!-- ##### All Javascript Files ##### -->
