@@ -1,32 +1,15 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Presente</div>
-              <form id="formgerundioPresente">
-              <table class="table table-borderless p-0 m-0">
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <input type="text" class="form-control" id="exgerundioPresente" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.gerundioPresente }}" id="answergerundioPresenteIo" hidden>
-                                <span class="CSSverbsAnswergerundioPresente">{{ verbo.gerundioPresente }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                          <button type="button" class="btn btn-outline-primary" id="answergerundioPresente">Controlla</button>&nbsp;
-                          <button type="button" class="btn btn-outline-secondary" id="ricominciagerundioPresente">Ricomincia</button>
+      <div class="p-3 border bg-light">
+          <div class="text-center">Presente</div>
+          <table class="table table-borderless p-0 m-0">
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="gerundioPresente" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.gerundioPresente }}">
+                          {% endfor %}
                       </div>
-                      </td>
-                  </tr>
-              </table>
-              </form>
-          </div>
-        </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+</div>

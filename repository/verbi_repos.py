@@ -152,7 +152,7 @@ class VerbiRepository:
             imperativoPresenteNoi='', imperativoPresenteVoi='', imperativoPresenteLoro=''):
         db = PostgreDB()
         try:
-            updating_query = f"update public.resenha set infinitivoPresente=%s, infinitivoPassato=%s, participioPresente=%s, participioPassato=%s, " \
+            updating_query = f"update public.verbi set infinitivoPresente=%s, infinitivoPassato=%s, participioPresente=%s, participioPassato=%s, " \
                              f"gerundioPresente=%s, gerundioPassato=%s, indicativoPresenteIo=%s, indicativoPresenteTu=%s, indicativoPresenteLui=%s," \
                              f"indicativoPresenteNoi=%s, indicativoPresenteVoi=%s, indicativoPresenteLoro=%s, indicativoPassatoProssimoIo=%s," \
                              f"indicativoPassatoProssimoTu=%s, indicativoPassatoProssimoLui=%s, indicativoPassatoProssimoNoi=%s," \
@@ -175,7 +175,7 @@ class VerbiRepository:
                              f"congiuntivoImperfettoNoi=%s, congiuntivoImperfettoVoi=%s, congiuntivoImperfettoLoro=%s, congiuntivoTrapassatoIo=%s," \
                              f"congiuntivoTrapassatoTu=%s, congiuntivoTrapassatoLui=%s, congiuntivoTrapassatoNoi=%s, congiuntivoTrapassatoVoi=%s," \
                              f"congiuntivoTrapassatoLoro=%s, imperativoPresenteTu=%s, imperativoPresenteLui=%s, imperativoPresenteNoi=%s," \
-                             f"imperativoPresenteVoi=%s, imperativoPresenteLoro=%s"
+                             f"imperativoPresenteVoi=%s, imperativoPresenteLoro=%s where infinitivoPresente='{infinitivoPresente}'"
             db.queryParams(updating_query, (
             infinitivoPresente, infinitivoPassato, participioPresente, participioPassato, gerundioPresente,
             gerundioPassato, indicativoPresenteIo,

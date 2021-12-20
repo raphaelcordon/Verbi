@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container p-4">
-    {% include 'adm/partials/adm/topMenuVerbiItaliano.html' %}
-</div>
+{% if session.id %}
+    <div class="container p-4">
+        {% include 'adm/partials/adm/topMenuVerbiItaliano.html' %}
+    </div>
+{% endif %}
 
 {% endblock %}

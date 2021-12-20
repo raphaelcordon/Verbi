@@ -1,32 +1,15 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Presente</div>
-              <form id="formparticipioPresente">
+      <div class="p-3 border bg-light">
+          <div class="text-center">Presente</div>
               <table class="table table-borderless p-0 m-0">
                   <tr>
                       <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <input type="text" class="form-control" id="exparticipioPresente" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.participioPresente }}" id="answerparticipioPresenteIo" hidden>
-                                <span class="CSSverbsAnswerparticipioPresente">{{ verbo.participioPresente }}</span>
+                          <div class="input-group input-group-sm">{% for verbo in ilverbo %}
+                              <input type="text" class="form-control" name="participioPresente" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.participioPresente }}">
                               {% endfor %}
                           </div>
                       </td>
                   </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                          <button type="button" class="btn btn-outline-primary" id="answerparticipioPresente">Controlla</button>&nbsp;
-                          <button type="button" class="btn btn-outline-secondary" id="ricominciaparticipioPresente">Ricomincia</button>
-                      </div>
-                      </td>
-                  </tr>
               </table>
-              </form>
-          </div>
-        </div>
+      </div>
+</div>

@@ -1,113 +1,61 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Imperfetto</div>
-              <form id="formindicativoImperfetto">
-              <table class="table table-borderless p-0 m-0">
-                  <tr>
-                      <td class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoImperfettoIo"> io </span>
-                              <input type="text" class="form-control" id="exindicativoImperfettoIo" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoImperfettoIo }}" id="answerindicativoImperfettoIo" hidden>
-                                <span class="CSSverbsAnswerindicativoImperfettoIo">{{ verbo.indicativoImperfettoIo }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoImperfettoTu"> tu </span>
-                              <input type="text" class="form-control" id="exindicativoImperfettoTu" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.indicativoImperfettoTu }}" id="answerindicativoImperfettoTu" hidden>
-                                    <span class="CSSverbsAnswerindicativoImperfettoTu">{{ verbo.indicativoImperfettoTu }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoImperfettoLui">lui</span>
-                              <input type="text" class="form-control" id="exindicativoImperfettoLui" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoImperfettoLui }}" id="answerindicativoImperfettoLui" hidden>
-                                <span class="CSSverbsAnswerindicativoImperfettoLui">{{ verbo.indicativoImperfettoLui }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoImperfettoNoi">noi</span>
-                              <input type="text" class="form-control" id="exindicativoImperfettoNoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.indicativoImperfettoNoi }}" id="answerindicativoImperfettoNoi" hidden>
-                                    <span class="CSSverbsAnswerindicativoImperfettoNoi">{{ verbo.indicativoImperfettoNoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoImperfettoVoi">voi</span>
-                              <input type="text" class="form-control" id="exindicativoImperfettoVoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoImperfettoVoi }}" id="answerindicativoImperfettoVoi" hidden>
-                                <span class="CSSverbsAnswerindicativoImperfettoVoi">{{ verbo.indicativoImperfettoVoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoImperfettoLoro">loro</span>
-                              <input type="text" class="form-control" id="exindicativoImperfettoLoro" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoImperfettoLoro }}" id="answerindicativoImperfettoLoro" hidden>
-                                <span class="CSSverbsAnswerindicativoImperfettoLoro">{{ verbo.indicativoImperfettoLoro }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                          <button type="button" class="btn btn-outline-primary" id="answerindicativoImperfetto">Controlla</button>&nbsp;
-                          <button type="button" class="btn btn-outline-secondary" id="ricominciaindicativoImperfetto">Ricomincia</button>
+      <div class="p-3 border bg-light">
+          <div class="text-center">Imperfetto</div>
+          <table class="table table-borderless p-0 m-0">
+              <tr>
+                  <td class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoImperfettoIo"> io </span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoImperfettoIo" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoImperfettoIo }}">
+                          {% endfor %}
                       </div>
-                      </td>
-                  </tr>
-              </table>
-              </form>
-          </div>
-        </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoImperfettoTu"> tu </span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoImperfettoTu" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoImperfettoTu }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoImperfettoLui">lui</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoImperfettoLui" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoImperfettoLui }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoImperfettoNoi">noi</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoImperfettoNoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoImperfettoNoi }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoImperfettoVoi">voi</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoImperfettoVoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoImperfettoVoi }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoImperfettoLoro">loro</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoImperfettoLoro" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoImperfettoLoro }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+</div>

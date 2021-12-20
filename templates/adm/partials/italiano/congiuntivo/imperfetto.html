@@ -1,113 +1,61 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Imperfetto</div>
-              <form id="formcongiuntivoImperfetto">
-              <table class="table table-borderless p-0 m-0">
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="congiuntivoImperfettoIo"> io </span>
-                              <input type="text" class="form-control" id="excongiuntivoImperfettoIo" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.congiuntivoImperfettoIo }}" id="answercongiuntivoImperfettoIo" hidden>
-                                <span class="CSSverbsAnswercongiuntivoImperfettoIo">{{ verbo.congiuntivoImperfettoIo }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="congiuntivoImperfettoTu"> tu </span>
-                              <input type="text" class="form-control" id="excongiuntivoImperfettoTu" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.congiuntivoImperfettoTu }}" id="answercongiuntivoImperfettoTu" hidden>
-                                    <span class="CSSverbsAnswercongiuntivoImperfettoTu">{{ verbo.congiuntivoImperfettoTu }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="congiuntivoImperfettoLui">lui</span>
-                              <input type="text" class="form-control" id="excongiuntivoImperfettoLui" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.congiuntivoImperfettoLui }}" id="answercongiuntivoImperfettoLui" hidden>
-                                <span class="CSSverbsAnswercongiuntivoImperfettoLui">{{ verbo.congiuntivoImperfettoLui }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="congiuntivoImperfettoNoi">noi</span>
-                              <input type="text" class="form-control" id="excongiuntivoImperfettoNoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.congiuntivoImperfettoNoi }}" id="answercongiuntivoImperfettoNoi" hidden>
-                                    <span class="CSSverbsAnswercongiuntivoImperfettoNoi">{{ verbo.congiuntivoImperfettoNoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="congiuntivoImperfettoVoi">voi</span>
-                              <input type="text" class="form-control" id="excongiuntivoImperfettoVoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.congiuntivoImperfettoVoi }}" id="answercongiuntivoImperfettoVoi" hidden>
-                                <span class="CSSverbsAnswercongiuntivoImperfettoVoi">{{ verbo.congiuntivoImperfettoVoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="congiuntivoImperfettoLoro">loro</span>
-                              <input type="text" class="form-control" id="excongiuntivoImperfettoLoro" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.congiuntivoImperfettoLoro }}" id="answercongiuntivoImperfettoLoro" hidden>
-                                <span class="CSSverbsAnswercongiuntivoImperfettoLoro">{{ verbo.congiuntivoImperfettoLoro }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                          <button type="button" class="btn btn-outline-primary" id="answercongiuntivoImperfetto">Controlla</button>&nbsp;
-                          <button type="button" class="btn btn-outline-secondary" id="ricominciacongiuntivoImperfetto">Ricomincia</button>
+      <div class="p-3 border bg-light">
+          <div class="text-center">Imperfetto</div>
+          <table class="table table-borderless p-0 m-0">
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="congiuntivoImperfettoIo"> io </span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="congiuntivoImperfettoIo" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.congiuntivoImperfettoIo }}">
+                          {% endfor %}
                       </div>
-                      </td>
-                  </tr>
-              </table>
-              </form>
-          </div>
-        </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="congiuntivoImperfettoTu"> tu </span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="congiuntivoImperfettoTu" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.congiuntivoImperfettoTu }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="congiuntivoImperfettoLui">lui</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="congiuntivoImperfettoLui" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.congiuntivoImperfettoLui }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="congiuntivoImperfettoNoi">noi</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="congiuntivoImperfettoNoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.congiuntivoImperfettoNoi }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="congiuntivoImperfettoVoi">voi</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="congiuntivoImperfettoVoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.congiuntivoImperfettoVoi }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="congiuntivoImperfettoLoro">loro</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="congiuntivoImperfettoLoro" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.congiuntivoImperfettoLoro }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+</div>

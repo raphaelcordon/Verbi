@@ -1,113 +1,103 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Passato</div>
-              <form id="formcondizionalePassato">
-              <table class="table table-borderless p-0 m-0">
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="condizionalePassatoIo"> io </span>
-                              <input type="text" class="form-control" id="excondizionalePassatoIo" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePassatoIo }}" id="answercondizionalePassatoIo" hidden>
-                                <span class="CSSverbsAnswercondizionalePassatoIo">{{ verbo.condizionalePassatoIo }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="condizionalePassatoTu"> tu </span>
-                              <input type="text" class="form-control" id="excondizionalePassatoTu" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.condizionalePassatoTu }}" id="answercondizionalePassatoTu" hidden>
-                                    <span class="CSSverbsAnswercondizionalePassatoTu">{{ verbo.condizionalePassatoTu }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="condizionalePassatoLui">lui</span>
-                              <input type="text" class="form-control" id="excondizionalePassatoLui" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePassatoLui }}" id="answercondizionalePassatoLui" hidden>
-                                <span class="CSSverbsAnswercondizionalePassatoLui">{{ verbo.condizionalePassatoLui }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="condizionalePassatoNoi">noi</span>
-                              <input type="text" class="form-control" id="excondizionalePassatoNoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.condizionalePassatoNoi }}" id="answercondizionalePassatoNoi" hidden>
-                                    <span class="CSSverbsAnswercondizionalePassatoNoi">{{ verbo.condizionalePassatoNoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="condizionalePassatoVoi">voi</span>
-                              <input type="text" class="form-control" id="excondizionalePassatoVoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePassatoVoi }}" id="answercondizionalePassatoVoi" hidden>
-                                <span class="CSSverbsAnswercondizionalePassatoVoi">{{ verbo.condizionalePassatoVoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="condizionalePassatoLoro">loro</span>
-                              <input type="text" class="form-control" id="excondizionalePassatoLoro" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePassatoLoro }}" id="answercondizionalePassatoLoro" hidden>
-                                <span class="CSSverbsAnswercondizionalePassatoLoro">{{ verbo.condizionalePassatoLoro }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                            <button type="button" class="btn btn-outline-primary" id="answercondizionalePassato">Controlla</button>&nbsp;
-                            <button type="button" class="btn btn-outline-secondary" id="ricominciacondizionalePassato">Ricomincia</button>
+      <div class="p-3 border bg-light">
+          <div class="text-center">Passato</div>
+          <table class="table table-borderless p-0 m-0">
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="condizionalePassatoIo"> io </span>
+                          <input type="text" class="form-control" name="condizionalePassatoIo" oninput="this.value = this.value.toLowerCase()">
                       </div>
-                      </td>
-                  </tr>
-              </table>
-              </form>
-          </div>
-        </div>
+                  </td>
+                  <td  class="pb-0 mb-0">
+                      <div>
+                          {% for verbo in ilverbo %}
+                            <input type="text" class="form-control" value="{{ verbo.condizionalePassatoIo }}" id="answercondizionalePassatoIo" hidden>
+                            <span class="CSSverbsAnswercondizionalePassatoIo">{{ verbo.condizionalePassatoIo }}</span>
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="condizionalePassatoTu"> tu </span>
+                          <input type="text" class="form-control" name="condizionalePassatoTu" oninput="this.value = this.value.toLowerCase()">
+                      </div>
+                  </td>
+                  <td  class="pb-0 mb-0">
+                      <div>
+                          {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.condizionalePassatoTu }}" id="answercondizionalePassatoTu" hidden>
+                                <span class="CSSverbsAnswercondizionalePassatoTu">{{ verbo.condizionalePassatoTu }}</span>
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="condizionalePassatoLui">lui</span>
+                          <input type="text" class="form-control" name="condizionalePassatoLui" oninput="this.value = this.value.toLowerCase()">
+                      </div>
+                  </td>
+                  <td  class="pb-0 mb-0">
+                      <div>
+                          {% for verbo in ilverbo %}
+                            <input type="text" class="form-control" value="{{ verbo.condizionalePassatoLui }}" id="answercondizionalePassatoLui" hidden>
+                            <span class="CSSverbsAnswercondizionalePassatoLui">{{ verbo.condizionalePassatoLui }}</span>
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="condizionalePassatoNoi">noi</span>
+                          <input type="text" class="form-control" name="condizionalePassatoNoi" oninput="this.value = this.value.toLowerCase()">
+                      </div>
+                  </td>
+                  <td  class="pb-0 mb-0">
+                      <div>
+                          {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.condizionalePassatoNoi }}" id="answercondizionalePassatoNoi" hidden>
+                                <span class="CSSverbsAnswercondizionalePassatoNoi">{{ verbo.condizionalePassatoNoi }}</span>
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="condizionalePassatoVoi">voi</span>
+                          <input type="text" class="form-control" name="condizionalePassatoVoi" oninput="this.value = this.value.toLowerCase()">
+                      </div>
+                  </td>
+                  <td  class="pb-0 mb-0">
+                      <div>
+                          {% for verbo in ilverbo %}
+                            <input type="text" class="form-control" value="{{ verbo.condizionalePassatoVoi }}" id="answercondizionalePassatoVoi" hidden>
+                            <span class="CSSverbsAnswercondizionalePassatoVoi">{{ verbo.condizionalePassatoVoi }}</span>
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="condizionalePassatoLoro">loro</span>
+                          <input type="text" class="form-control" name="condizionalePassatoLoro" oninput="this.value = this.value.toLowerCase()">
+                      </div>
+                  </td>
+                  <td  class="pb-0 mb-0">
+                      <div>
+                          {% for verbo in ilverbo %}
+                            <input type="text" class="form-control" value="{{ verbo.condizionalePassatoLoro }}" id="answercondizionalePassatoLoro" hidden>
+                            <span class="CSSverbsAnswercondizionalePassatoLoro">{{ verbo.condizionalePassatoLoro }}</span>
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+</div>

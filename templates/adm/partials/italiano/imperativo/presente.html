@@ -1,20 +1,12 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Presente</div>
-              <form id="formimperativoPresente">
+      <div class="p-3 border bg-light">
+          <div class="text-center">Presente</div>
               <table class="table table-borderless p-0 m-0">
                   <tr>
                       <td  class="pb-0 mb-0">
                           <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="imperativoPresenteTu"> tu </span>
-                              <input type="text" class="form-control" id="eximperativoPresenteTu" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.imperativoPresenteTu }}" id="answerimperativoPresenteTu" hidden>
-                                    <span class="CSSverbsAnswerimperativoPresenteTu">{{ verbo.imperativoPresenteTu }}</span>
+                              <span class="input-group-text" id="imperativoPresenteTu"> tu </span>{% for verbo in ilverbo %}
+                              <input type="text" class="form-control" name="imperativoPresenteTu" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.imperativoPresenteTu }}">
                               {% endfor %}
                           </div>
                       </td>
@@ -22,15 +14,8 @@
                   <tr>
                       <td  class="pb-0 mb-0">
                           <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="imperativoPresenteLui">lui</span>
-                              <input type="text" class="form-control" id="eximperativoPresenteLui" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.imperativoPresenteLui }}" id="answerimperativoPresenteLui" hidden>
-                                <span class="CSSverbsAnswerimperativoPresenteLui">{{ verbo.imperativoPresenteLui }}</span>
+                              <span class="input-group-text" id="imperativoPresenteLui">lui</span>{% for verbo in ilverbo %}
+                              <input type="text" class="form-control" name="imperativoPresenteLui" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.imperativoPresenteLui }}">
                               {% endfor %}
                           </div>
                       </td>
@@ -38,15 +23,8 @@
                   <tr>
                       <td  class="pb-0 mb-0">
                           <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="imperativoPresenteNoi">noi</span>
-                              <input type="text" class="form-control" id="eximperativoPresenteNoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.imperativoPresenteNoi }}" id="answerimperativoPresenteNoi" hidden>
-                                    <span class="CSSverbsAnswerimperativoPresenteNoi">{{ verbo.imperativoPresenteNoi }}</span>
+                              <span class="input-group-text" id="imperativoPresenteNoi">noi</span>{% for verbo in ilverbo %}
+                              <input type="text" class="form-control" name="imperativoPresenteNoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.imperativoPresenteNoi }}">
                               {% endfor %}
                           </div>
                       </td>
@@ -54,15 +32,8 @@
                   <tr>
                       <td  class="pb-0 mb-0">
                           <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="imperativoPresenteVoi">voi</span>
-                              <input type="text" class="form-control" id="eximperativoPresenteVoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.imperativoPresenteVoi }}" id="answerimperativoPresenteVoi" hidden>
-                                <span class="CSSverbsAnswerimperativoPresenteVoi">{{ verbo.imperativoPresenteVoi }}</span>
+                              <span class="input-group-text" id="imperativoPresenteVoi">voi</span>{% for verbo in ilverbo %}
+                              <input type="text" class="form-control" name="imperativoPresenteVoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.imperativoPresenteVoi }}">
                               {% endfor %}
                           </div>
                       </td>
@@ -70,28 +41,12 @@
                   <tr>
                       <td  class="pb-0 mb-0">
                           <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="imperativoPresenteLoro">loro</span>
-                              <input type="text" class="form-control" id="eximperativoPresenteLoro" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.imperativoPresenteLoro }}" id="answerimperativoPresenteLoro" hidden>
-                                <span class="CSSverbsAnswerimperativoPresenteLoro">{{ verbo.imperativoPresenteLoro }}</span>
+                              <span class="input-group-text" id="imperativoPresenteLoro">loro</span>{% for verbo in ilverbo %}
+                              <input type="text" class="form-control" name="imperativoPresenteLoro" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.imperativoPresenteLoro }}">
                               {% endfor %}
                           </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                          <button type="button" class="btn btn-outline-primary" id="answerimperativoPresente">Controlla</button>&nbsp;
-                          <button type="button" class="btn btn-outline-secondary" id="ricominciaimperativoPresente">Ricomincia</button>
-                      </div>
                       </td>
                   </tr>
               </table>
-              </form>
-          </div>
-        </div>
+      </div>
+</div>

@@ -1,113 +1,62 @@
 <div class="col pt-1 pb-1">
-          <div class="p-3 border bg-light">
-              <div class="text-center">Trapassato Remoto</div>
-              <form id="formindicativoTrapassatoRemoto">
-              <table class="table table-borderless p-0 m-0">
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoTrapassatoRemotoIo"> io </span>
-                              <input type="text" class="form-control" id="exindicativoTrapassatoRemotoIo" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoTrapassatoRemotoIo }}" id="answerindicativoTrapassatoRemotoIo" hidden>
-                                <span class="CSSverbsAnswerindicativoTrapassatoRemotoIo">{{ verbo.indicativoTrapassatoRemotoIo }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoTrapassatoRemotoTu"> tu </span>
-                              <input type="text" class="form-control" id="exindicativoTrapassatoRemotoTu" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.indicativoTrapassatoRemotoTu }}" id="answerindicativoTrapassatoRemotoTu" hidden>
-                                    <span class="CSSverbsAnswerindicativoTrapassatoRemotoTu">{{ verbo.indicativoTrapassatoRemotoTu }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoTrapassatoRemotoLui">lui</span>
-                              <input type="text" class="form-control" id="exindicativoTrapassatoRemotoLui" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoTrapassatoRemotoLui }}" id="answerindicativoTrapassatoRemotoLui" hidden>
-                                <span class="CSSverbsAnswerindicativoTrapassatoRemotoLui">{{ verbo.indicativoTrapassatoRemotoLui }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoTrapassatoRemotoNoi">noi</span>
-                              <input type="text" class="form-control" id="exindicativoTrapassatoRemotoNoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.indicativoTrapassatoRemotoNoi }}" id="answerindicativoTrapassatoRemotoNoi" hidden>
-                                    <span class="CSSverbsAnswerindicativoTrapassatoRemotoNoi">{{ verbo.indicativoTrapassatoRemotoNoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoTrapassatoRemotoVoi">voi</span>
-                              <input type="text" class="form-control" id="exindicativoTrapassatoRemotoVoi" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoTrapassatoRemotoVoi }}" id="answerindicativoTrapassatoRemotoVoi" hidden>
-                                <span class="CSSverbsAnswerindicativoTrapassatoRemotoVoi">{{ verbo.indicativoTrapassatoRemotoVoi }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td  class="pb-0 mb-0">
-                          <div class="input-group input-group-sm">
-                              <span class="input-group-text" id="indicativoTrapassatoRemotoLoro">loro</span>
-                              <input type="text" class="form-control" id="exindicativoTrapassatoRemotoLoro" oninput="this.value = this.value.toLowerCase()">
-                          </div>
-                      </td>
-                      <td  class="pb-0 mb-0">
-                          <div>
-                              {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.indicativoTrapassatoRemotoLoro }}" id="answerindicativoTrapassatoRemotoLoro" hidden>
-                                <span class="CSSverbsAnswerindicativoTrapassatoRemotoLoro">{{ verbo.indicativoTrapassatoRemotoLoro }}</span>
-                              {% endfor %}
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="2" class="text-center">
-                        <div class="input-group input-group-sm">
-                            <button type="button" class="btn btn-outline-primary" id="answerindicativoTrapassatoRemoto">Controlla</button>&nbsp;
-                            <button type="button" class="btn btn-outline-secondary" id="ricominciaindicativoTrapassatoRemoto">Ricomincia</button>
+      <div class="p-3 border bg-light">
+          <div class="text-center">Trapassato Remoto</div>
+          <table class="table table-borderless p-0 m-0">
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoTrapassatoRemotoIo"> io </span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoTrapassatoRemotoIo" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoTrapassatoRemotoIo }}">
+                          {% endfor %}
                       </div>
-                      </td>
-                  </tr>
-              </table>
-              </form>
-          </div>
-        </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoTrapassatoRemotoTu"> tu </span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoTrapassatoRemotoTu" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoTrapassatoRemotoTu }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoTrapassatoRemotoLui">lui</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoTrapassatoRemotoLui" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoTrapassatoRemotoLui }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoTrapassatoRemotoNoi">noi</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoTrapassatoRemotoNoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoTrapassatoRemotoNoi }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoTrapassatoRemotoVoi">voi</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoTrapassatoRemotoVoi" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoTrapassatoRemotoVoi }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td  class="pb-0 mb-0">
+                      <div class="input-group input-group-sm">
+                          <span class="input-group-text" id="indicativoTrapassatoRemotoLoro">loro</span>{% for verbo in ilverbo %}
+                          <input type="text" class="form-control" name="indicativoTrapassatoRemotoLoro" oninput="this.value = this.value.toLowerCase()" value="{{ verbo.indicativoTrapassatoRemotoLoro }}">
+                          {% endfor %}
+                      </div>
+                  </td>
+              </tr>
+          </table>
+      </div>
+</div>
