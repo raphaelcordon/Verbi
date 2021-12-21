@@ -75,7 +75,7 @@ footer a {
 @media screen and (max-width: 480px) {
 
   .indexLogo{
-    max-width: 150px;
+    max-width: 200px;
   }
 }
 
@@ -85,7 +85,7 @@ footer a {
 @media screen and (min-width: 481px) and (max-width: 800px) {
 
   .indexLogo{
-    max-width: 200px;
+    max-width: 250px;
   }
 
 }
@@ -97,7 +97,7 @@ footer a {
   
   .indexLogo{
 
-      max-width: 350px;
+      max-width: 400px;
   }
 
 }
