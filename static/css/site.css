@@ -70,6 +70,12 @@ footer a {
   height: auto;
 }
 
+.imageFlags{
+  min-width: 30%;
+  max-width: 50%;
+  height: auto;
+}
+
 /* CSS for Smartphones */
 
 @media screen and (max-width: 480px) {
