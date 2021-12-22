@@ -65,7 +65,6 @@ footer a {
 
 
 .indexLogo{
-  width: 100%;
   min-width: 100px;
   height: auto;
 }
@@ -75,13 +74,16 @@ footer a {
   max-width: 50%;
   height: auto;
 }
+.greyColor {
+  color: gray;
+}
 
 /* CSS for Smartphones */
 
 @media screen and (max-width: 480px) {
 
   .indexLogo{
-    max-width: 200px;
+    max-width:inherit;
   }
 }
 
@@ -91,7 +93,7 @@ footer a {
 @media screen and (min-width: 481px) and (max-width: 800px) {
 
   .indexLogo{
-    max-width: 250px;
+    max-width: 350px;
   }
 
 }
@@ -103,7 +105,7 @@ footer a {
   
   .indexLogo{
 
-      max-width: 400px;
+      max-width: 450px;
   }
 
 }
