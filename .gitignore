@@ -8,3 +8,7 @@
 *.pyc
 *.pyc
 static/.DS_Store
+*.pyc
+static/.DS_Store
+pyScripts/__pycache__/italiano.cpython-38.pyc
+.DS_Store
