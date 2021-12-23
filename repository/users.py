@@ -9,7 +9,7 @@ class UsersRepository:
         db = PostgreDB()
         try:
             insert = f"INSERT INTO public.users (name, surname, password, email, changepass)" \
-                     f"VALUES (%s, %s, %s, %s, 'false')"
+                     f"VALUES (%s, %s, %s, %s, 'true')"
             db.queryParams(insert, (name, surname, password, email))
         except Exception as exp:
             print(exp)
