@@ -69,6 +69,11 @@ footer a {
   height: auto;
 }
 
+.logoTopMenu{
+  max-width: 200px;
+  height: auto;
+}
+
 .imageFlags{
   min-width: 30%;
   max-width: 50%;
@@ -95,7 +100,6 @@ footer a {
   .indexLogo{
     max-width: 350px;
   }
-
 }
 
 
@@ -104,7 +108,6 @@ footer a {
 @media screen and (min-width: 801px) {
   
   .indexLogo{
-
       max-width: 450px;
   }
 

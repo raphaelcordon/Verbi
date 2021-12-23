@@ -1,5 +1,11 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Logo Start -->
+      <a class="mr-2" href="{{ url_for('ind.index') }}">
+          <img src="{{ url_for('static', filename='image/logo.png') }}" class="logoTopMenu" alt="http://www.practiceTheVerb.com">
+      </a>
+    <!-- Logo End -->
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -7,7 +13,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('ita.italianoMain') }}"><i class="fas fa-home"></i> L'inizio</a>
+            <a class="nav-link" href="{{ url_for('ind.index') }}"><i class="fas fa-home"></i> L'inizio</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('ita.italianoMain') }}"><i class="fas fa-th-list"></i> Elenco dei verbi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="far fa-edit"></i> Scegli un verbo:</a>
