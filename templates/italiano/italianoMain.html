@@ -4,8 +4,9 @@
     <!-- ##### Partial Top Menu #####-->
     {% include 'italiano/partials/topMenu.html' %}
     <div class="container">
-        <h2 class="text-center">Verbi più popolari, in ordine alfabetico:</h2>
+        <h2 class="text-center mt-1 mb-2">Verbi più popolari, in ordine alfabetico:</h2>
         {% for letter in sequence %}
+        <hr>
         <h3 class="greyColor text-center"> <i class="fas fa-ellipsis-h"></i>  <b>{{ letter|capitalize }}</b>  <i class="fas fa-ellipsis-h"></i> </h3>
             {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
                 {% if item[0] == letter %}
