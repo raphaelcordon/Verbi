@@ -1,8 +1,5 @@
-{% include 'italiano/base.html' %}
-<body>
-<div class="bg">
-    <!-- ##### Partial Top Menu #####-->
-    {% include 'italiano/partials/topMenu.html' %}
+{% extends 'italiano/base.html' %}
+{% block content %}
 
     <!-- Main Buttons controlling all -->
     <div class="container pb-4 text-center">
@@ -135,9 +132,4 @@
       </div>
     </div>
 
-</div>
-<!-- ##### Partial Footer ##### -->
-{% include 'italiano/partials/footer.html' %}
-
-</body>
-</html>
+{% endblock %}

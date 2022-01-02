@@ -1,8 +1,6 @@
-{% include 'italiano/base.html' %}
-<body>
-<div class="bg">
-    <!-- ##### Partial Top Menu #####-->
-    {% include 'italiano/partials/topMenu.html' %}
+{% extends 'italiano/base.html' %}
+{% block content %}
+
     <div class="container">
         <h2 class="text-center mt-1 mb-2">Verbi più popolari, in ordine alfabetico:</h2>
         {% for letter in sequence %}
@@ -18,9 +16,5 @@
             <br>
         {% endfor %}
     </div>
-</div>
-<!-- ##### Partial Footer ##### -->
-{% include 'italiano/partials/footer.html' %}
 
-</body>
-</html>
+{% endblock %}
