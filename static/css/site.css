@@ -59,12 +59,20 @@
 /*  FOOTER  */
 
 footer {
+  width: 100%;
+  position: absolute;
   text-align: center;
-  background-color: black;
-  color: white;
+  background: black;
+  color:#ffffff;
+  padding: 3% 0 !important;
+  font-family: 'Roboto', sans-serif;
 }
+
 footer a {
   color: white;
+}
+footer a:hover {
+  color:oldlace;
 }
 .logoFooter {
     width: 65% !important;
