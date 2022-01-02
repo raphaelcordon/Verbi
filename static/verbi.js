@@ -8,6 +8,10 @@ function include(file) {
   document.getElementsByTagName('head').item(0).appendChild(script);
 
 }
+
+/* Include JS Verbs ControlaTutti */
+include('/static/js/controllaTutti.js');
+
 /* Include JS Verbs INDICATIVO */
 include('/static/js/indicativo/presente.js');
 include('/static/js/indicativo/passatoProssimo.js');
