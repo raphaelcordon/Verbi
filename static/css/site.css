@@ -1,5 +1,28 @@
 /* MOBILE FIRST */
 
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: rgb(0, 11, 167);
+  opacity: 50%;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
 /*  BACKGROUND  */
 .bg { 
   background: url(../image/pexels-gizem-7939051.jpg) no-repeat center center fixed;
