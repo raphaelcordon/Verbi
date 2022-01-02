@@ -48,6 +48,9 @@
     <!-- Python Block Start -->
     {% block content %} {% endblock %}
 
+    <!-- Modal for UserMessage -->
+    {% include 'adm/partials/modalTalkToUs.html' %}
+
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-3.6.0 js -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery/jquery-3.6.0.min.js') }}"></script>

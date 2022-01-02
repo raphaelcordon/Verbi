@@ -1,5 +1,6 @@
 from flask import render_template, session, redirect, url_for, Blueprint, request, flash
 from repository.verbi_repos import VerbiRepository as VerbiRepo
+from thirdparty.gmail import UserEmail
 
 ind = Blueprint('ind', __name__, url_prefix='')
 
@@ -15,6 +16,18 @@ def index():
 @ind.route('/adm')
 def adm():
     return render_template('adm/adm.html')
+
+
+@ind.route('/talkToUs', methods=['GET', 'POST'])
+def talkToUs():
+    UserEmail(
+        request.form['name'],
+        request.form['email'],
+        request.form['subject'],
+        request.form['message']
+    )
+    flash(f'Message successfully sent! :)', 'success')
+    return redirect(request.referrer)
 
 
 @ind.route('/adm/verbiItaliano/', methods=['GET', 'POST'])

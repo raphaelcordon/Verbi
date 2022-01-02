@@ -16,3 +16,20 @@ class EmailPassword:
         with SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login('cordonraphael@gmail.com', 'piuxeaxjwrqifhcw')
             smtp.send_message(msg)
+
+
+class UserEmail:
+    def __init__(self, name, email, subject, message):
+        msg = EmailMessage()
+        msg['Subject'] = subject
+        msg['From'] = f'Mensagem de {name} em practiceTheVerb'
+        msg['To'] = 'cordonraphael@gmail.com'
+        msg.set_content(f"Olá, meu nome é  {name}.\n\n"
+                        f"Meu email é '{email}'.\n "
+                        f"Minha mensagem:\n "
+                        f"{message}.\n\n"
+                        )
+
+        with SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login('cordonraphael@gmail.com', 'piuxeaxjwrqifhcw')
+            smtp.send_message(msg)
