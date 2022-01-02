@@ -34,7 +34,7 @@
 }
 
 .bgIndex {
-  background: url(../image/mike-swigunski-LUdSrJw-BII-unsplash.jpg) no-repeat center center fixed;
+  background: url(../image/bgIndex.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -106,12 +106,38 @@ footer a:hover {
 }
 
 .imageFlags{
-  min-width: 20%;
-  max-width: 35%;
+  min-width: 35%;
+  max-width: 45%;
   height: auto;
 }
 .greyColor {
   color: gray;
+}
+.indexBetterExperience {
+  color: rgb(0, 139, 42);
+  animation-name: shineBetterExperience;
+  animation-duration: 6s;
+}
+@keyframes shineBetterExperience {
+  from {color: white;}
+  to {color: rgb(0, 139, 42);}
+}
+
+.indexButtons {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(0, 139, 42);
+  opacity: 90%;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 12px;
+}
+
+.indexButtons:hover {
+  background-color: #555;
 }
 
 /* CSS for Smartphones */
@@ -120,6 +146,9 @@ footer a:hover {
 
   .indexLogo{
     max-width:350px;
+  }
+  .indexBetterExperience {
+    font-size: 18px;
   }
 }
 
@@ -131,6 +160,9 @@ footer a:hover {
   .indexLogo{
     max-width: 350px;
   }
+  .indexBetterExperience {
+    font-size: 20px;
+  }
 }
 
 
@@ -140,6 +172,9 @@ footer a:hover {
   
   .indexLogo{
       max-width: 450px;
+  }
+  .indexBetterExperience {
+    font-size: 28px;
   }
 
 }

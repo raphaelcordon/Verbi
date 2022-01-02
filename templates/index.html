@@ -25,28 +25,26 @@
     <meta property="og:image:width"     content="300" />
     <meta property="og:image:height"    content="300" />
 </head>
-<body class="">
+<body class="bgIndex">
     <div class="text-center"><img src="{{ url_for('static', filename='image/logo.png') }}" class="indexLogo"></div>
     <div class="container text-center p-4">
         <article class="container">
+                <div class="text-center m-2 p-2">
+                    <p class="indexBetterExperience m-3 p-3"><i class="fas fa-tv">&nbsp; Better experience on wide screens !!!</i></p>
+                </div>
             <div class="row">
                     <table class="table">
                         <tr>
                             <td class="text-center align-middle">
-                                <h4 class="greyColor"><i class="fas fa-tv">&nbsp; Better experience on wide screens !!!</i></h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center align-middle">
                                 <a href="{{ url_for('ita.italianoMain') }}">
-                                    <button class="btn btn-link" type="button"><b>ITALIANO</b> - Vieni a fare pratica</button><br>
+                                    <button class="indexButtons" type="button"><b>Italian Verbs | Verbi in italiano</b></button><br>
                                 <img class="imageFlags" src="{{ url_for('static', filename='image/flags/italy.png') }}">
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td class="text-center align-middle">
-                                <button class="btn btn-link" type="button"><b>ENGLISH</b></button><br>
+                                <button class="indexButtons" type="button"><b>English Verbs | Unavailable</b></button><br>
                                 <img class="imageFlags" src="{{ url_for('static', filename='image/flags/ukConstruction.png') }}">
                             </td>
                         </tr>
@@ -54,6 +52,7 @@
             </div>
         </article>
         <br>
+        <p>&nbsp;</p>
 
     </div>
     <!-- ##### Partial Footer ##### -->
