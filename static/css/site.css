@@ -61,6 +61,7 @@
 footer {
   width: 100%;
   position: absolute;
+  bottom: 0;
   text-align: center;
   background: black;
   color:#ffffff;
@@ -106,8 +107,8 @@ footer a:hover {
 }
 
 .imageFlags{
-  min-width: 30%;
-  max-width: 50%;
+  min-width: 20%;
+  max-width: 35%;
   height: auto;
 }
 .greyColor {
