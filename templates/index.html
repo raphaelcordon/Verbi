@@ -41,7 +41,7 @@
         {% endif %}
     {% endwith %}
     <!-- ##### Flask Messages end ##### -->
-    <div class="text-center"><img src="{{ url_for('static', filename='image/logo.png') }}" class="indexLogo"></div>
+    <div class="text-center"><img src="{{ url_for('static', filename='image/logo.png') }}" class="indexLogo" alt="www.practiceTheVerb.com"></div>
     <div class="text-center m-2 p-2">
         <p class="indexBetterExperience"><i class="fas fa-tv">&nbsp; Better experience on wide screens !!!</i></p>
     </div>
@@ -53,14 +53,14 @@
                             <td class="text-center align-middle">
                                 <a href="{{ url_for('ita.italianoMain') }}">
                                     <button class="indexButtons" type="button"><b>Italian Verbs | Verbi in italiano</b></button><br>
-                                <img class="imageFlags" src="{{ url_for('static', filename='image/flags/italy.png') }}">
+                                <img class="imageFlags" src="{{ url_for('static', filename='image/flags/italy.png') }}" alt="Verbs in Italian for training">
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td class="text-center align-middle">
                                 <button class="indexButtons" type="button"><b>English Verbs | Unavailable</b></button><br>
-                                <img class="imageFlags" src="{{ url_for('static', filename='image/flags/ukConstruction.png') }}">
+                                <img class="imageFlags" src="{{ url_for('static', filename='image/flags/ukConstruction.png') }}" alt="English Module is under construction">
                             </td>
                         </tr>
                     </table>
