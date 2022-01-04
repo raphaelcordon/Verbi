@@ -157,6 +157,7 @@ hr {
 /* CSS for BUTTONS OF VERBS */
 
 a.button2{
+  background-color: rgba(255,255,255, 0.5);
   display:inline-flex;
   padding:0.1em 1em;
   border:0.15em solid rgb(0, 139, 42);
@@ -164,7 +165,7 @@ a.button2{
   text-decoration:none;
   text-transform:uppercase;
   font-family:'Roboto',sans-serif;
-  font-weight:350;
+  font-weight:400;
   color:rgb(0, 139, 42);
   text-align:center;
   transition: all 0.15s;
