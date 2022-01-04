@@ -55,6 +55,16 @@
                                     <button class="indexButtons" type="button"><b>Italian Verbs | Verbi in italiano</b></button><br>
                                 <img class="imageFlags" src="{{ url_for('static', filename='image/flags/italy.png') }}" alt="Verbs in Italian for training">
                                 </a>
+
+                                <div>
+                                    <h4 class="pt-1 mt-1">TOP 20:</h4>
+                                {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                                    {% if item in top20 %}
+                                      <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}" class="button2 bouncy m-1">{{ item|capitalize }}</a>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                                <hr/>
                             </td>
                         </tr>
                         <tr>

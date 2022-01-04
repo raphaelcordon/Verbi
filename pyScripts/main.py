@@ -9,8 +9,11 @@ ind = Blueprint('ind', __name__, url_prefix='')
 def index():
 
     CleanSession()
+    verbi = VerbiRepo().ListDistinctVerbs()
+    top20 = ('essere', 'avere', 'fare', 'dire', 'potere', 'volere', 'sapere', 'stare', 'dovere', 'vedere', 'andare',
+             'venire', 'dare', 'parlare', 'trovare', 'sentire', 'lasciare', 'prendere', 'guardare', 'mettere')
 
-    return render_template('index.html')
+    return render_template('index.html', verbi=verbi, top20=top20)
 
 
 @ind.route('/adm')

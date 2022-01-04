@@ -11,8 +11,10 @@ def italianoMain():
 
     sequence = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                 'u', 'v', 'z')
+    top20 = ('essere', 'avere', 'fare', 'dire', 'potere', 'volere', 'sapere', 'stare', 'dovere', 'vedere', 'andare',
+             'venire', 'dare', 'parlare', 'trovare', 'sentire', 'lasciare', 'prendere', 'guardare', 'mettere')
 
-    return render_template('italiano/italianoMain.html', verbi=verbi, sequence=sequence)
+    return render_template('italiano/italianoMain.html', verbi=verbi, sequence=sequence, top20=top20)
 
 
 @ita.route('/italiano/<verbo>/', methods=['GET', 'POST'])
