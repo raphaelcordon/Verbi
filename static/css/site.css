@@ -140,6 +140,19 @@ footer a:hover {
   background-color: #555;
 }
 
+.fontShadow {
+  text-shadow: 2px 2px #bdbdbd;
+}
+
+hr {
+	border-bottom: 2px solid #bdbdbd !important;
+}
+
+.imageInstructions {
+  width: 100%;
+  height: auto;
+}
+
 /* CSS for Smartphones */
 
 @media screen and (max-width: 480px) {
