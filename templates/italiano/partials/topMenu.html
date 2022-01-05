@@ -6,6 +6,7 @@
       </a>
     <!-- Logo End -->
 
+    <!-- Top Menu Colapse items Start -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,19 +22,26 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('ita.italianoMain') }}"><i class="fas fa-th-list"></i> Elenco dei verbi</a>
             </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Top Menu Colapse items End -->
+
+    <!-- Top Menu Find verbs, non-Colapse items Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+        <ul class="navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link" href="#"><i class="far fa-edit"></i> Scegli un verbo:</a>
             </li>
             <li class="nav-item active">
                 <form class="form-inline" method="POST" action="{{ url_for('ita.italianoAltroVerbo') }}" enctype="multipart/form-data">
-                     <input type="text" class="mr-1" name="verbo" id="verbo" autofocus>
+                     <input type="text" class="" name="verbo" id="verbo" autofocus>
                     <button class="btn btn-outline-success my-2 my-sm-0 pt-0 pb-0 m-1" type="submit">Ricerca</button>
                 </form>
             </li>
         </ul>
-
-      </div>
     </nav>
+    <!-- Top Menu Find verbs, non-Colapse items End -->
 
     <!-- ##### Flask Messages start ##### -->
     {% with messages = get_flashed_messages(with_categories=true) %}

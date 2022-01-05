@@ -1,3 +1,47 @@
+/* CSS for Smartphones */
+
+@media screen and (max-width: 480px) {
+
+  .indexLogo {
+    max-width: 300px;
+  }
+  .indexBetterExperience {
+    font-size: 18px;
+  }
+}
+
+
+/* CSS for Tablets */
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+
+  .indexLogo {
+    max-width: 350px;
+  }
+  .indexBetterExperience {
+    font-size: 22px;
+  }
+}
+
+
+/* CSS for Big Screens */
+
+@media screen and (min-width: 801px) {
+  
+  .indexLogo {
+      max-width: 500px;
+  }
+  .indexBetterExperience {
+    font-size: 26px;
+  }
+}
+
+
+/* ----------------------- */
+/* ---- GENERAL CODE ---- */
+/* ----------------------- */
+
+
 #myBtn {
   display: none;
   position: fixed;
@@ -190,44 +234,5 @@ a.button2{
     48%{top:-0.4em}
     50%{top:0em}
     100%{top:0em;}
-  }
-
-
-
-/* CSS for Smartphones */
-
-@media screen and (max-width: 480px) {
-
-  .indexLogo {
-    max-width:350px;
-  }
-  .indexBetterExperience {
-    font-size: 18px;
-  }
-}
-
-
-/* CSS for Tablets */
-
-@media screen and (min-width: 481px) and (max-width: 800px) {
-
-  .indexLogo {
-    max-width: 350px;
-  }
-  .indexBetterExperience {
-    font-size: 22px;
-  }
-}
-
-
-/* CSS for Big Screens */
-
-@media screen and (min-width: 801px) {
-  
-  .indexLogo {
-      max-width: 400px;
-  }
-  .indexBetterExperience {
-    font-size: 32px;
   }
 }
