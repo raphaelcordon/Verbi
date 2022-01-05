@@ -91,7 +91,6 @@
   }
 
 
-
 /*  FOOTER  */
 
 footer {
@@ -129,7 +128,6 @@ footer a:hover {
   from {color: white;}
   to {color: black;}
 }
-
 
 .indexLogo{
   min-width: 100px;
@@ -187,6 +185,11 @@ hr {
 .imageInstructions {
   width: 100%;
   height: auto;
+}
+
+.textUpercase {
+  text-transform:uppercase;
+  font-weight: 800;
 }
 
 
