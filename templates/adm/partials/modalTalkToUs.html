@@ -1,3 +1,9 @@
+<script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+</script>
+
 <!-- Modal for Message from users -->
 <div class="modal fade" id="talkToUsModal" tabindex="-1" role="dialog" aria-labelledby="talkToUsLabel"
      aria-hidden="true" data-backdrop="false">
@@ -24,6 +30,7 @@
                         <div class="mb-2"><label>Message:</label> <textarea class="form-control" type="text"
                                     id="message" name="message" placeholder="Your message" required rows="4"></textarea></div>
                         <div class="mb-2 text-center d-grid gap-2"><button type="submit" class="btn btn-secondary btn-sm">&nbsp; -- Send -- &nbsp;</button></div>
+                        <div class="g-recaptcha mb-2 text-center d-grid gap-2" data-sitekey="6LcdKBUeAAAAAPFhAJQrgi9uHRDIaV7mbNAYyxPq"></div>
                     </form>
                     <!-- ##### Form Edit End ##### -->
                 </div>
