@@ -39,7 +39,7 @@ def talkToUs():
             flash(f'Message successfully sent! :)', 'success')
             return redirect(request.referrer)
         else:
-            flash(f'Fill up the Captcha before sending messages.', 'danger')
+            flash(f'Fill up the reCaptcha before sending messages.', 'danger')
     return redirect(request.referrer)
 
 
