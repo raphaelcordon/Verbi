@@ -30,9 +30,9 @@ def talkToUs():
                 request.form['name'],
                 request.form['email'],
                 request.form['subject'],
-                request.form['message']
-            )
+                request.form['message'])
             flash(f'Message successfully sent! :)', 'success')
+            return redirect(request.referrer)
         else:
             flash(f'Please, fill up the Captcha!', 'danger')
     return redirect(request.referrer)
