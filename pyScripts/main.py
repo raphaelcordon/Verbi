@@ -1,4 +1,5 @@
 from flask import render_template, session, redirect, url_for, Blueprint, request, flash
+from flask_recaptcha import ReCaptcha
 from repository.verbi_repos import VerbiRepository as VerbiRepo
 from thirdparty.gmail import UserEmail
 
@@ -23,13 +24,17 @@ def adm():
 
 @ind.route('/talkToUs', methods=['GET', 'POST'])
 def talkToUs():
-    UserEmail(
-        request.form['name'],
-        request.form['email'],
-        request.form['subject'],
-        request.form['message']
-    )
-    flash(f'Message successfully sent! :)', 'success')
+    if request.method == 'POST':  # Check to see if flask.request.method is POST
+        if ReCaptcha.verify():  # Use verify() method to see if ReCaptcha is filled out
+            UserEmail(
+                request.form['name'],
+                request.form['email'],
+                request.form['subject'],
+                request.form['message']
+            )
+            flash(f'Message successfully sent! :)', 'success')
+        else:
+            flash(f'Please, fill up the Captcha!', 'danger')
     return redirect(request.referrer)
 
 
