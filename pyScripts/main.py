@@ -1,9 +1,14 @@
-from flask import render_template, session, redirect, url_for, Blueprint, request, flash
+from flask import render_template, session, redirect, url_for, Blueprint, request, flash, Flask
 from flask_recaptcha import ReCaptcha
 from repository.verbi_repos import VerbiRepository as VerbiRepo
 from thirdparty.gmail import UserEmail
 
 ind = Blueprint('ind', __name__, url_prefix='')
+
+reCaptchaConf = Flask(__name__)
+reCaptchaConf.config['RECAPTCHA_SITE_KEY'] = 'YOUR_RECAPTCHA_SITE_KEY'
+reCaptchaConf.config['RECAPTCHA_SECRET_KEY'] = 'YOUR_RECAPTCHA_SECRET_KEY'
+recaptcha = ReCaptcha(reCaptchaConf)
 
 
 @ind.route('/')
@@ -25,7 +30,7 @@ def adm():
 @ind.route('/talkToUs', methods=['GET', 'POST'])
 def talkToUs():
     if request.method == 'POST':  # Check to see if flask.request.method is POST
-        if ReCaptcha.verify():  # Use verify() method to see if ReCaptcha is filled out
+        if recaptcha.verify():  # Use verify() method to see if ReCaptcha is filled out
             UserEmail(
                 request.form['name'],
                 request.form['email'],
@@ -34,7 +39,7 @@ def talkToUs():
             flash(f'Message successfully sent! :)', 'success')
             return redirect(request.referrer)
         else:
-            flash(f'Please, fill up the Captcha!', 'danger')
+            flash(f'Fill up the Captcha before sending messages.', 'danger')
     return redirect(request.referrer)
 
 
