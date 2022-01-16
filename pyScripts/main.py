@@ -29,18 +29,17 @@ def adm():
 
 @ind.route('/talkToUs', methods=['GET', 'POST'])
 def talkToUs():
-    if request.method == 'POST':  # Check to see if flask.request.method is POST
-        if recaptcha.verify():  # Use verify() method to see if ReCaptcha is filled out
-            UserEmail(
-                request.form['name'],
-                request.form['email'],
-                request.form['subject'],
-                request.form['message'])
-            flash(f'Message successfully sent! :)', 'success')
-            return redirect(request.referrer)
-        else:
-            flash(f'Fill up the reCaptcha before sending messages.', 'danger')
-    return redirect(request.referrer)
+    if recaptcha.verify():  # to see if ReCaptcha is filled out
+        UserEmail(
+            request.form['name'],
+            request.form['email'],
+            request.form['subject'],
+            request.form['message'])
+        flash(f'Message successfully sent! :)', 'success')
+        return redirect(request.referrer)
+    else:
+        flash(f'Fill up the reCaptcha before sending messages.', 'danger')
+        return redirect(request.referrer)
 
 
 @ind.route('/adm/verbiItaliano/', methods=['GET', 'POST'])
