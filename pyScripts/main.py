@@ -6,8 +6,8 @@ from thirdparty.gmail import UserEmail
 ind = Blueprint('ind', __name__, url_prefix='')
 
 reCaptchaConf = Flask(__name__)
-reCaptchaConf.config['RECAPTCHA_SITE_KEY'] = 'YOUR_RECAPTCHA_SITE_KEY'
-reCaptchaConf.config['RECAPTCHA_SECRET_KEY'] = 'YOUR_RECAPTCHA_SECRET_KEY'
+reCaptchaConf.config['RECAPTCHA_SITE_KEY'] = '6LcdKBUeAAAAAPFhAJQrgi9uHRDIaV7mbNAYyxPq'
+reCaptchaConf.config['RECAPTCHA_SECRET_KEY'] = '6LcdKBUeAAAAAGgOQDrijg1ru5dWjUPEvuYkiaZB'
 recaptcha = ReCaptcha(reCaptchaConf)
 
 
