@@ -14,13 +14,16 @@
 
         <h2 class="text-center mt-1 mb-2">Verbi più popolari, in ordine alfabetico:</h2>
 
+
         <!-- ##### Alphabetic menu START ##### -->
-        <h4 class="greyColor text-center fontShadow p-1">|
+        <h4 class="greyColor text-center fontShadow p-1 m-1">|
             {% for letter in sequence %}
             &nbsp;<a href="#{{ letter }}"> {{ letter|capitalize }} </a> &nbsp;|
             {% endfor %}
         </h4>
+        <hr/>
         <!-- ##### Alphabetic menu END ##### -->
+
 
         {% for letter in sequence %}
         <h3 class="greyColor text-center fontShadow"><div id="{{ letter }}"> <i class="fas fa-ellipsis-h"></i>  <b>{{ letter|capitalize }}</b>  <i class="fas fa-ellipsis-h"></i> </div></h3>
