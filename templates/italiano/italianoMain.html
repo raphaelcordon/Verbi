@@ -13,8 +13,17 @@
         <hr/>
 
         <h2 class="text-center mt-1 mb-2">Verbi più popolari, in ordine alfabetico:</h2>
+
+        <!-- ##### Alphabetic menu START ##### -->
+        <h4 class="greyColor text-center fontShadow p-1">|
+            {% for letter in sequence %}
+            &nbsp;<a href="#{{ letter }}"> {{ letter|capitalize }} </a> &nbsp;|
+            {% endfor %}
+        </h4>
+        <!-- ##### Alphabetic menu END ##### -->
+
         {% for letter in sequence %}
-        <h3 class="greyColor text-center fontShadow"> <i class="fas fa-ellipsis-h"></i>  <b>{{ letter|capitalize }}</b>  <i class="fas fa-ellipsis-h"></i> </h3>
+        <h3 class="greyColor text-center fontShadow"><div id="{{ letter }}"> <i class="fas fa-ellipsis-h"></i>  <b>{{ letter|capitalize }}</b>  <i class="fas fa-ellipsis-h"></i> </div></h3>
         <div class="text-justify">
             {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
                     {% if item[0] == letter and item in top20 %}

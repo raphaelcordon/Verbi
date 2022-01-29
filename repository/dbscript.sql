@@ -83,3 +83,21 @@ CREATE TABLE IF NOT EXISTS public."verbi" (
 	imperativoPresenteNoi VARCHAR(50),
 	imperativoPresenteVoi VARCHAR(50),
 	imperativoPresenteLoro VARCHAR(50));
+
+
+
+CREATE TABLE IF NOT EXISTS public."italiancondizionale" (
+	ID serial PRIMARY KEY,
+	infinitivoPresente VARCHAR(50),
+	condizionalePresenteIo VARCHAR(50),
+	condizionalePresenteTu VARCHAR(50),
+	condizionalePresenteLui VARCHAR(50),
+	condizionalePresenteNoi VARCHAR(50),
+	condizionalePresenteVoi VARCHAR(50),
+	condizionalePresenteLoro VARCHAR(50),
+	condizionalePassatoIo VARCHAR(50),
+	condizionalePassatoTu VARCHAR(50),
+	condizionalePassatoLui VARCHAR(50),
+	condizionalePassatoNoi VARCHAR(50),
+	condizionalePassatoVoi VARCHAR(50),
+	condizionalePassatoLoro VARCHAR(50));
