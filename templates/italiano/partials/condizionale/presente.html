@@ -13,10 +13,8 @@
                       <td  class="pb-0 mb-0">
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'condizionalePresente' %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteIo }}" id="answercondizionalePresenteIo" hidden>
-                                <span class="CSSverbsAnswercondizionalePresenteIo">{{ verbo.condizionalePresenteIo }}</span>
-                                {% endif %}
+                                <input type="text" class="form-control" value="{{ condizionale.condizionalePresenteIo }}" id="answercondizionalePresenteIo" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteIo">{{ condizionale.condizionalePresenteIo }}</span>
                               {% endfor %}
                           </div>
                       </td>
@@ -31,10 +29,8 @@
                       <td  class="pb-0 mb-0">
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'condizionalePresente' %}
-                                    <input type="text" class="form-control" value="{{ verbo.condizionalePresenteTu }}" id="answercondizionalePresenteTu" hidden>
-                                    <span class="CSSverbsAnswercondizionalePresenteTu">{{ verbo.condizionalePresenteTu }}</span>
-                                {% endif %}
+                                    <input type="text" class="form-control" value="{{ condizionale.condizionalePresenteTu }}" id="answercondizionalePresenteTu" hidden>
+                                    <span class="CSSverbsAnswercondizionalePresenteTu">{{ condizionale.condizionalePresenteTu }}</span>
                               {% endfor %}
                           </div>
                       </td>
@@ -49,10 +45,8 @@
                       <td  class="pb-0 mb-0">
                           <div>
                               {% for verbo in ilverbo %}
-                                {% if verbo.tempo == 'condizionalePresente' %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteLui }}" id="answercondizionalePresenteLui" hidden>
-                                <span class="CSSverbsAnswercondizionalePresenteLui">{{ verbo.condizionalePresenteLui }}</span>
-                                {% endif %}
+                                <input type="text" class="form-control" value="{{ condizionale.condizionalePresenteLui }}" id="answercondizionalePresenteLui" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteLui">{{ condizionale.condizionalePresenteLui }}</span>
                               {% endfor %}
                           </div>
                       </td>
@@ -67,8 +61,8 @@
                       <td  class="pb-0 mb-0">
                           <div>
                               {% for verbo in ilverbo %}
-                                    <input type="text" class="form-control" value="{{ verbo.condizionalePresenteNoi }}" id="answercondizionalePresenteNoi" hidden>
-                                    <span class="CSSverbsAnswercondizionalePresenteNoi">{{ verbo.condizionalePresenteNoi }}</span>
+                                    <input type="text" class="form-control" value="{{ condizionale.condizionalePresenteNoi }}" id="answercondizionalePresenteNoi" hidden>
+                                    <span class="CSSverbsAnswercondizionalePresenteNoi">{{ condizionale.condizionalePresenteNoi }}</span>
                               {% endfor %}
                           </div>
                       </td>
@@ -83,8 +77,8 @@
                       <td  class="pb-0 mb-0">
                           <div>
                               {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteVoi }}" id="answercondizionalePresenteVoi" hidden>
-                                <span class="CSSverbsAnswercondizionalePresenteVoi">{{ verbo.condizionalePresenteVoi }}</span>
+                                <input type="text" class="form-control" value="{{ condizionale.condizionalePresenteVoi }}" id="answercondizionalePresenteVoi" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteVoi">{{ condizionale.condizionalePresenteVoi }}</span>
                               {% endfor %}
                           </div>
                       </td>
@@ -99,8 +93,8 @@
                       <td  class="pb-0 mb-0">
                           <div>
                               {% for verbo in ilverbo %}
-                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteLoro }}" id="answercondizionalePresenteLoro" hidden>
-                                <span class="CSSverbsAnswercondizionalePresenteLoro">{{ verbo.condizionalePresenteLoro }}</span>
+                                <input type="text" class="form-control" value="{{ condizionale.condizionalePresenteLoro }}" id="answercondizionalePresenteLoro" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteLoro">{{ condizionale.condizionalePresenteLoro }}</span>
                               {% endfor %}
                           </div>
                       </td>
@@ -108,8 +102,8 @@
                   <tr>
                       <td colspan="2" class="text-center">
                         <div class="input-group input-group-sm">
-                          <button type="button" class="btn btn-outline-primary" id="answercondizionalePresente">Controlla</button>&nbsp;
-                          <button type="button" class="btn btn-outline-secondary" id="ricominciacondizionalePresente">Ricomincia</button>
+                            <button type="button" class="btn btn-outline-primary" id="answercondizionalePresente">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciacondizionalePresente">Ricomincia</button>
                       </div>
                       </td>
                   </tr>

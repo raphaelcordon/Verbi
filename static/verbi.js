@@ -28,9 +28,9 @@ include('/static/js/congiuntivo/passato.js');
 include('/static/js/congiuntivo/imperfetto.js');
 include('/static/js/congiuntivo/trapassato.js');
 
-/* Include JS Verbs CONDIZIONALE
+/* Include JS Verbs CONDIZIONALE */
 include('/static/js/condizionale/presente.js');
-include('/static/js/condizionale/passato.js');*/
+include('/static/js/condizionale/passato.js');
 
 /* Include JS Verbs IMPERATIVO */
 include('/static/js/imperativo/presente.js');

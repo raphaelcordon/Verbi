@@ -1,75 +1,75 @@
-$(document).on('click', "#answercongiuntivoPassato", function () {
-    runcongiuntivoPassato();
+$(document).on('click', "#answercondizionalePassato", function () {
+    runcondizionalePassato();
 });
-function runcongiuntivoPassato() {
+function runcondizionalePassato() {
 
-    var excongiuntivoPassatoIo = document.getElementById('excongiuntivoPassatoIo').value;
-    var excongiuntivoPassatoTu = document.getElementById('excongiuntivoPassatoTu').value;
-    var excongiuntivoPassatoLui = document.getElementById('excongiuntivoPassatoLui').value;
-    var excongiuntivoPassatoNoi = document.getElementById('excongiuntivoPassatoNoi').value;
-    var excongiuntivoPassatoVoi = document.getElementById('excongiuntivoPassatoVoi').value;
-    var excongiuntivoPassatoLoro = document.getElementById('excongiuntivoPassatoLoro').value;
+    var excondizionalePassatoIo = document.getElementById('excondizionalePassatoIo').value;
+    var excondizionalePassatoTu = document.getElementById('excondizionalePassatoTu').value;
+    var excondizionalePassatoLui = document.getElementById('excondizionalePassatoLui').value;
+    var excondizionalePassatoNoi = document.getElementById('excondizionalePassatoNoi').value;
+    var excondizionalePassatoVoi = document.getElementById('excondizionalePassatoVoi').value;
+    var excondizionalePassatoLoro = document.getElementById('excondizionalePassatoLoro').value;
 
     //io
-    var answercongiuntivoPassatoIo = document.getElementById('answercongiuntivoPassatoIo').value;
-    if (excongiuntivoPassatoIo == answercongiuntivoPassatoIo){
-        $('.CSSverbsAnswercongiuntivoPassatoIo').attr('style', 'display: initial; color: green;');
+    var answercondizionalePassatoIo = document.getElementById('answercondizionalePassatoIo').value;
+    if (excondizionalePassatoIo == answercondizionalePassatoIo){
+        $('.CSSverbsAnswercondizionalePassatoIo').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswercongiuntivoPassatoIo').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswercondizionalePassatoIo').attr('style', 'display: initial; color: red;');
     };
 
     //tu
-    var answercongiuntivoPassatoTu = document.getElementById('answercongiuntivoPassatoTu').value;
-    if (excongiuntivoPassatoTu == answercongiuntivoPassatoTu){
-        $('.CSSverbsAnswercongiuntivoPassatoTu').attr('style', 'display: initial; color: green;');
+    var answercondizionalePassatoTu = document.getElementById('answercondizionalePassatoTu').value;
+    if (excondizionalePassatoTu == answercondizionalePassatoTu){
+        $('.CSSverbsAnswercondizionalePassatoTu').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswercongiuntivoPassatoTu').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswercondizionalePassatoTu').attr('style', 'display: initial; color: red;');
     };
 
     //lui
-    var answercongiuntivoPassatoLui = document.getElementById('answercongiuntivoPassatoLui').value;
-    if (excongiuntivoPassatoLui == answercongiuntivoPassatoLui){
-        $('.CSSverbsAnswercongiuntivoPassatoLui').attr('style', 'display: initial; color: green;');
+    var answercondizionalePassatoLui = document.getElementById('answercondizionalePassatoLui').value;
+    if (excondizionalePassatoLui == answercondizionalePassatoLui){
+        $('.CSSverbsAnswercondizionalePassatoLui').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswercongiuntivoPassatoLui').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswercondizionalePassatoLui').attr('style', 'display: initial; color: red;');
     };
 
     //noi
-    var answercongiuntivoPassatoNoi = document.getElementById('answercongiuntivoPassatoNoi').value;
-    if (excongiuntivoPassatoNoi == answercongiuntivoPassatoNoi){
-        $('.CSSverbsAnswercongiuntivoPassatoNoi').attr('style', 'display: initial; color: green;');
+    var answercondizionalePassatoNoi = document.getElementById('answercondizionalePassatoNoi').value;
+    if (excondizionalePassatoNoi == answercondizionalePassatoNoi){
+        $('.CSSverbsAnswercondizionalePassatoNoi').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswercongiuntivoPassatoNoi').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswercondizionalePassatoNoi').attr('style', 'display: initial; color: red;');
     };
 
     //voi
-    var answercongiuntivoPassatoVoi = document.getElementById('answercongiuntivoPassatoVoi').value;
-    if (excongiuntivoPassatoVoi == answercongiuntivoPassatoVoi){
-        $('.CSSverbsAnswercongiuntivoPassatoVoi').attr('style', 'display: initial; color: green;');
+    var answercondizionalePassatoVoi = document.getElementById('answercondizionalePassatoVoi').value;
+    if (excondizionalePassatoVoi == answercondizionalePassatoVoi){
+        $('.CSSverbsAnswercondizionalePassatoVoi').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswercongiuntivoPassatoVoi').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswercondizionalePassatoVoi').attr('style', 'display: initial; color: red;');
     };
 
     //loro
-    var answercongiuntivoPassatoLoro = document.getElementById('answercongiuntivoPassatoLoro').value;
-    if (excongiuntivoPassatoLoro == answercongiuntivoPassatoLoro){
-        $('.CSSverbsAnswercongiuntivoPassatoLoro').attr('style', 'display: initial; color: green;');
+    var answercondizionalePassatoLoro = document.getElementById('answercondizionalePassatoLoro').value;
+    if (excondizionalePassatoLoro == answercondizionalePassatoLoro){
+        $('.CSSverbsAnswercondizionalePassatoLoro').attr('style', 'display: initial; color: green;');
     }else{
-        $('.CSSverbsAnswercongiuntivoPassatoLoro').attr('style', 'display: initial; color: red;');
+        $('.CSSverbsAnswercondizionalePassatoLoro').attr('style', 'display: initial; color: red;');
     };
   };
 
 // Cleaning the form
-$(document).on('click', "#ricominciacongiuntivoPassato", function () {
-    cleancongiuntivoPassato();
+$(document).on('click', "#ricominciacondizionalePassato", function () {
+    cleancondizionalePassato();
 });
-function cleancongiuntivoPassato() {
-    $('.CSSverbsAnswercongiuntivoPassatoIo').attr('style', 'display: none;');
-    $('.CSSverbsAnswercongiuntivoPassatoTu').attr('style', 'display: none;');
-    $('.CSSverbsAnswercongiuntivoPassatoLui').attr('style', 'display: none;');
-    $('.CSSverbsAnswercongiuntivoPassatoNoi').attr('style', 'display: none;');
-    $('.CSSverbsAnswercongiuntivoPassatoVoi').attr('style', 'display: none;');
-    $('.CSSverbsAnswercongiuntivoPassatoLoro').attr('style', 'display: none;');
+function cleancondizionalePassato() {
+    $('.CSSverbsAnswercondizionalePassatoIo').attr('style', 'display: none;');
+    $('.CSSverbsAnswercondizionalePassatoTu').attr('style', 'display: none;');
+    $('.CSSverbsAnswercondizionalePassatoLui').attr('style', 'display: none;');
+    $('.CSSverbsAnswercondizionalePassatoNoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswercondizionalePassatoVoi').attr('style', 'display: none;');
+    $('.CSSverbsAnswercondizionalePassatoLoro').attr('style', 'display: none;');
 
-    document.getElementById('formcongiuntivoPassato').reset();
+    document.getElementById('formcondizionalePassato').reset();
 };

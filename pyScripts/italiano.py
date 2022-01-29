@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint, request, flash, redirect, url_for
 from repository.verbi_repos import VerbiRepository as VerbiRepo
+from repository.italianoCondizionale_repos import VerbiRepository as VerbiCondizionale
 from thirdparty.api import ApiUltralingua
 
 ita = Blueprint('ita', __name__, url_prefix='')
@@ -22,8 +23,9 @@ def italianoVerbo(verbo):
 
     ilverbo = VerbiRepo().FindByVerb(verbo)
     verbi = VerbiRepo().ListDistinctVerbs()
+    verbiCondizionale = VerbiCondizionale().FindByVerb(verbo)
 
-    return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo)
+    return render_template('italiano/italiano.html', verbi=verbi, ilverbo=ilverbo, verbiCondizionale=verbiCondizionale)
 
 
 @ita.route('/', methods=['GET', 'POST'])

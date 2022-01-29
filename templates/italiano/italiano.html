@@ -12,10 +12,10 @@
       </div>
     </div>
 
-    <!-- Verbs INDICATIVO -->
+    <!-- Verbs INDICATIVO START-->
     <div class="container">
       <div class="p-3 border bgTransparentVerbs">
-        <div class="text-center"><h4>INDICATIVO</h4></div>
+        <div class="text-center"><h4>INDICATIVO (Indicative)</h4></div>
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
               <!-- ##### Partial Presente ##### -->
                 {% include 'italiano/partials/indicativo/presente.html' %}
@@ -44,13 +44,39 @@
       </div>
     </div>
 
+
+    <!-- Verbs CONDIZIONALE -->
+    {% for item in ilverbo %}
+    {% for condizionale in verbiCondizionale %}
+        {% if condizionale.infinitivoPresente == item.infinitivoPresente %}
+        <!-- DIVISION LINE -->
+        <div class="container"><hr></div>
+
+            <div class="container">
+              <div class="p-3 border bgTransparentVerbs">
+                <div class="text-center"><h4>Condizionale (Conditional)</h4></div>
+                  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+                      <!-- ##### Partial Presente ##### -->
+                        {% include 'italiano/partials/condizionale/presente.html' %}
+
+                      <!-- ##### Partial Passato ##### -->
+                        {% include 'italiano/partials/condizionale/passato.html' %}
+                  </div>
+              </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    {% endfor %}
+
     <!-- DIVISION LINE -->
     <div class="container"><hr></div>
+    <!-- Verbs INDICATIVO END-->
 
-    <!-- Verbs CONGIUNTIVO -->
+
+    <!-- Verbs CONGIUNTIVO START-->
     <div class="container">
       <div class="p-3 border bgTransparentVerbs">
-        <div class="text-center"><h4>CONGIUNTIVO</h4></div>
+        <div class="text-center"><h4>CONGIUNTIVO (Subjunctive)</h4></div>
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
               <!-- ##### Partial Presente ##### -->
                 {% include 'italiano/partials/congiuntivo/presente.html' %}
@@ -69,25 +95,29 @@
 
     <!-- DIVISION LINE -->
     <div class="container"><hr></div>
+    <!-- Verbs CONGIUNTIVO END-->
 
-    <!-- Verbs IMPERATIVO -->
+
+    <!-- Verbs IMPERATIVO START -->
     <div class="container">
       <div class="p-3 border bgTransparentVerbs">
-        <div class="text-center"><h4>Imperativo</h4></div>
+        <div class="text-center"><h4>Imperativo (Imperative)</h4></div>
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
               <!-- ##### Partial Imperativo ##### -->
                 {% include 'italiano/partials/imperativo/presente.html' %}
           </div>
       </div>
     </div>
-    ------
+
     <!-- DIVISION LINE -->
     <div class="container"><hr></div>
+    <!-- Verbs IMPERATIVO END -->
 
-    <!-- Verbs INFINITO -->
+
+    <!-- Verbs INFINITO START-->
     <div class="container">
       <div class="p-3 border bgTransparentVerbs">
-        <div class="text-center"><h4>INFINITO</h4></div>
+        <div class="text-center"><h4>INFINITO (Infinitive)</h4></div>
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
               <!-- ##### Partial Infinito ##### -->
                 {% include 'italiano/partials/infinitivo/presente.html' %}
@@ -100,11 +130,13 @@
 
     <!-- DIVISION LINE -->
     <div class="container"><hr></div>
+    <!-- Verbs INFINITO END-->
 
-    <!-- Verbs PARTICIPIO -->
+
+    <!-- Verbs PARTICIPIO START -->
     <div class="container">
       <div class="p-3 border bgTransparentVerbs">
-        <div class="text-center"><h4>PARTICIPIO</h4></div>
+        <div class="text-center"><h4>PARTICIPIO (Participle)</h4></div>
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
               <!-- ##### Partial Participio ##### -->
                 {% include 'italiano/partials/participio/presente.html' %}
@@ -117,11 +149,13 @@
 
     <!-- DIVISION LINE -->
     <div class="container"><hr></div>
+    <!-- Verbs PARTICIPIO END -->
 
-    <!-- Verbs GERUNDIO -->
+
+    <!-- Verbs GERUNDIO START-->
     <div class="container">
       <div class="p-3 border bgTransparentVerbs">
-        <div class="text-center"><h4>GERUNDIO</h4></div>
+        <div class="text-center"><h4>GERUNDIO (Gerund)</h4></div>
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
               <!-- ##### Partial Presente ##### -->
                 {% include 'italiano/partials/gerundio/presente.html' %}
@@ -131,5 +165,7 @@
           </div>
       </div>
     </div>
+    <!-- Verbs GERUNDIO END-->
+
 
 {% endblock %}

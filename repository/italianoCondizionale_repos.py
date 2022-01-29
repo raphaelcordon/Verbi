@@ -1,16 +1,28 @@
 from .base_repos import PostgreDB
-from models.italianoCondizionale_model import Italiano, ItalianoOneVerb
+from models.italianoCondizionale_model import Verbi, ItalianoOneVerb
 
 
-class ItalianoRepository:
+class VerbiRepository:
 
     # <- Register a new 'Verb' in the table ->
-    def New(self, verbo, tempo, io, tu, lui, noi, voi, loro):
+    def New(self, infinitivoPresente='', condizionalePresenteIo='', condizionalePresenteTu='', 
+            condizionalePresenteLui='', condizionalePresenteNoi='', condizionalePresenteVoi='', 
+            condizionalePresenteLoro='', condizionalePassatoIo='', condizionalePassatoTu='', 
+            condizionalePassatoLui='', condizionalePassatoNoi='', condizionalePassatoVoi='', 
+            condizionalePassatoLoro=''):
         db = PostgreDB()
         try:
-            insert = f"INSERT INTO public.italiancondizionale (verbo, tempo, io, tu, lui, noi, voi, loro)" \
-                     f"VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
-            db.queryParams(insert, (verbo, tempo, io, tu, lui, noi, voi, loro))
+            insert = f"INSERT INTO public.italiancondizionale (infinitivoPresente, condizionalePresenteIo, condizionalePresenteTu, " \
+                     f"condizionalePresenteLui, condizionalePresenteNoi, condizionalePresenteVoi," \
+                     f"condizionalePresenteLoro, condizionalePassatoIo, condizionalePassatoTu," \
+                     f"condizionalePassatoLui, condizionalePassatoNoi, condizionalePassatoVoi, condizionalePassatoLoro)"\
+                     f"VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            db.queryParams(insert, (
+                infinitivoPresente, condizionalePresenteIo, condizionalePresenteTu, condizionalePresenteLui, 
+                condizionalePresenteNoi, condizionalePresenteVoi, condizionalePresenteLoro, condizionalePassatoIo, 
+                condizionalePassatoTu, condizionalePassatoLui, condizionalePassatoNoi, condizionalePassatoVoi, 
+                condizionalePassatoLoro
+            ))
         except Exception as exp:
             print(exp)
         finally:
@@ -31,7 +43,7 @@ class ItalianoRepository:
     def FindByVerb(self, verbo):
         db = PostgreDB()
         try:
-            db.query(f"SELECT * FROM public.italiancondizionale where verbo = '{verbo}'")
+            db.query(f"SELECT * FROM public.italiancondizionale where infinitivoPresente = '{verbo}'")
             return self.__toList(db.fetchAll())
         except Exception as exp:
             print(exp)
@@ -42,8 +54,30 @@ class ItalianoRepository:
     def ListDistinctVerbs(self):
         db = PostgreDB()
         try:
-            db.query(f"SELECT DISTINCT verbo FROM public.italiancondizionale")
+            db.query(f"SELECT DISTINCT infinitivoPresente FROM public.italiancondizionale")
             return self.__toListDistinctVerbs(db.fetchAll())
+        except Exception as exp:
+            print(exp)
+        finally:
+            db.close()
+
+    def Edit(self, infinitivoPresente='', condizionalePresenteIo='', condizionalePresenteTu='', 
+            condizionalePresenteLui='', condizionalePresenteNoi='', condizionalePresenteVoi='', 
+            condizionalePresenteLoro='', condizionalePassatoIo='', condizionalePassatoTu='', 
+            condizionalePassatoLui='', condizionalePassatoNoi='', condizionalePassatoVoi='', 
+            condizionalePassatoLoro=''):
+        db = PostgreDB()
+        try:
+            updating_query = f"update public.italiancondizionale set infinitivoPresente=%s, condizionalePresenteIo=%s, condizionalePresenteTu=%s, condizionalePresenteLui=%s," \
+                             f"condizionalePresenteNoi=%s, condizionalePresenteVoi=%s, condizionalePresenteLoro=%s, condizionalePassatoIo=%s," \
+                             f"condizionalePassatoTu=%s, condizionalePassatoLui=%s, condizionalePassatoNoi=%s," \
+                             f"condizionalePassatoVoi=%s, condizionalePassatoLoro=%s"
+            db.queryParams(updating_query, (
+                infinitivoPresente, condizionalePresenteIo, condizionalePresenteTu, condizionalePresenteLui,
+                condizionalePresenteNoi, condizionalePresenteVoi, condizionalePresenteLoro, condizionalePassatoIo,
+                condizionalePassatoTu, condizionalePassatoLui, condizionalePassatoNoi, condizionalePassatoVoi,
+                condizionalePassatoLoro
+            ))
         except Exception as exp:
             print(exp)
         finally:
@@ -53,7 +87,7 @@ class ItalianoRepository:
     def Delete(self, verbo):
         db = PostgreDB()
         try:
-            db.query(f"DELETE FROM public.italiancondizionale WHERE verbo = {verbo}")
+            db.query(f"DELETE FROM public.italiancondizionale WHERE infinitivoPresente = {verbo}")
         except Exception as exp:
             print(exp)
         finally:
@@ -74,7 +108,9 @@ class ItalianoRepository:
 
     def __toOne(self, item):
         try:
-            return Italiano(item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7], item[8])
+            return Verbi(item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7], item[8], item[9],
+                         item[10], item[11], item[12], item[13]
+                         )
         except Exception as exp:
             print(exp)
 

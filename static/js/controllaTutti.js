@@ -17,8 +17,8 @@ $(document).on('click', "#ricominciaTutti", function () {
     cleancongiuntivoTrapassato();
 
 // Cleaning the form C O N D I Z I O N A L E
-//    cleancondizionalePassato();
-//    cleancondizionalePresente();
+    cleancondizionalePassato();
+    cleancondizionalePresente();
 
 // Cleaning the form I M P E R A T I V O
     cleanimperativoPresente();
@@ -57,8 +57,8 @@ $(document).on('click', "#controllaTutti", function () {
     runcongiuntivoTrapassato();
 
 // Checking the form C O N D I Z I O N A L E
-//    runcondizionalePassato();
-//    runcondizionalePresente();
+    runcondizionalePassato();
+    runcondizionalePresente();
 
 // Cleaning the form I M P E R A T I V O
     runimperativoPresente();
