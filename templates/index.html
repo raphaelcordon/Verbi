@@ -42,8 +42,10 @@
         {% endif %}
     {% endwith %}
     <!-- ##### Flask Messages end ##### -->
+
     <div class="text-center"><img src="{{ url_for('static', filename='image/logo.png') }}" class="indexLogo"
-                                  alt="practiceTheVerb.com"></div>
+                                  alt="practiceTheVerb.com,
+                                  Verbs for practising in different languages and verb tenses"></div>
     <div class="text-center m-2 p-2">
         <p class="indexBetterExperience"><i class="fas fa-tv">&nbsp; Better experience on wide screens !!!</i></p>
     </div>
@@ -54,18 +56,21 @@
                         <tr>
                             <td class="text-center align-middle">
                                 <a href="{{ url_for('ita.italianoMain') }}">
-                                    <button class="indexButtons" type="button"><b>Italian Verbs | Verbi in italiano</b></button><br>
-                                <img class="imageFlags" src="{{ url_for('static', filename='image/flags/italy.png') }}"
+                                    <button class="indexButtons" type="button">
+                                        <b>Italian Verbs' Full list<br>Elenco completo dei verbi italiani</b>
+                                    </button><br>
+                                    <img class="imageFlags" src="{{ url_for('static', filename='image/flags/italy.png') }}"
                                      alt="Verbs in Italian for practising / Verbi in italiano per esercitarsi">
                                 </a>
 
                                 <div>
                                     <h4 class="pt-1 mt-1">TOP 20:</h4>
-                                {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
-                                    {% if item in top20 %}
-                                      <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}" class="button2 bouncy m-1">{{ item|capitalize }}</a>
-                                    {% endif %}
-                                {% endfor %}
+                                    {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                                        {% if item in top20 %}
+                                          <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}"
+                                             class="button2 bouncy m-1">{{ item|capitalize }}</a>
+                                        {% endif %}
+                                    {% endfor %}
                                 </div>
                             </td>
                         </tr>
