@@ -30,12 +30,12 @@
         <div class="text-justify">
             {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
                     {% if item[0] == letter and item in top20 %}
-                        <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
-                            <button type="button" class="btn btn-link m-1 text-success textUpercase fontShadow"><b>{{ item }}</b></button>
+                        <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}"
+                           class="btn btn-link m-1 text-success textUpercase fontShadow"><b>{{ item }}</b>
                         </a>
                     {% elif item[0] == letter %}
-                        <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}">
-                            <button type="button" class="btn btn-link m-1 text-success">{{ item|capitalize }}</button>
+                        <a href="{{ url_for('ita.italianoVerbo', verbo=item) }}"
+                        class="btn btn-link m-1 text-success textUpercase"> {{ item|capitalize }}
                         </a>
                     {% endif %}
             {% endfor %}
