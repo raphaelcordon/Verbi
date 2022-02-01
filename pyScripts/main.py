@@ -1,4 +1,4 @@
-from flask import render_template, session, redirect, url_for, Blueprint, request, flash, Flask
+from flask import render_template, session, redirect, url_for, Blueprint, request, flash, Flask, Response
 from flask_recaptcha import ReCaptcha
 from repository.verbi_repos import VerbiRepository as VerbiRepo
 from thirdparty.gmail import UserEmail
@@ -61,6 +61,16 @@ def admItalianoUpdateVerbo():
     ilverbo = VerbiRepo().FindByVerb(str(request.form['infinitivoPresente']).lower().strip())
     flash(f'Verbo aggiornato con successo', 'success')
     return render_template('adm/italiano.html', ilverbo=ilverbo)
+
+
+@ind.route('/<ads>.<txt>')
+def adsTxt(ads, txt):
+    if ads == 'ads' and txt == 'txt':
+        with open("ads.txt", "r") as f:
+            content = f.read()
+        return Response(content, mimetype='text/plain')
+    else:
+        return redirect(url_for('ind.index'))
 
 
 def CleanSession():
