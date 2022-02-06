@@ -30,8 +30,6 @@ def italianoVerbo(verbo):
         return render_template('italiano/italiano.html', ilverbo=ilverbo, verbiCondizionale=verbiCondizionale)
     else:
         ilverbo = RiflessiviRepo().FindByVerb(verbo)
-        for item in ilverbo:
-            print(item.condizionalePassatoIo)
         return render_template('italiano/italiano.html', ilverbo=ilverbo)
 
 
