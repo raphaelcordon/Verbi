@@ -1,0 +1,113 @@
+<div class="col pt-1 pb-1">
+          <div class="p-3 border bg-light">
+              <div class="text-center">Presente (Present)</div>
+              <form id="formcondizionalePresente">
+              <table class="table table-borderless p-0 m-0">
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="condizionalePresenteIo"> io </span>
+                              <input type="text" class="form-control" id="excondizionalePresenteIo" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteIo }}" id="answercondizionalePresenteIo" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteIo">{{ verbo.condizionalePresenteIo }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="condizionalePresenteTu"> tu </span>
+                              <input type="text" class="form-control" id="excondizionalePresenteTu" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.condizionalePresenteTu }}" id="answercondizionalePresenteTu" hidden>
+                                    <span class="CSSverbsAnswercondizionalePresenteTu">{{ verbo.condizionalePresenteTu }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="condizionalePresenteLui">lui</span>
+                              <input type="text" class="form-control" id="excondizionalePresenteLui" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteLui }}" id="answercondizionalePresenteLui" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteLui">{{ verbo.condizionalePresenteLui }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="condizionalePresenteNoi">noi</span>
+                              <input type="text" class="form-control" id="excondizionalePresenteNoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                    <input type="text" class="form-control" value="{{ verbo.condizionalePresenteNoi }}" id="answercondizionalePresenteNoi" hidden>
+                                    <span class="CSSverbsAnswercondizionalePresenteNoi">{{ verbo.condizionalePresenteNoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="condizionalePresenteVoi">voi</span>
+                              <input type="text" class="form-control" id="excondizionalePresenteVoi" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteVoi }}" id="answercondizionalePresenteVoi" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteVoi">{{ verbo.condizionalePresenteVoi }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td  class="pb-0 mb-0">
+                          <div class="input-group input-group-sm">
+                              <span class="input-group-text" id="condizionalePresenteLoro">loro</span>
+                              <input type="text" class="form-control" id="excondizionalePresenteLoro" oninput="this.value = this.value.toLowerCase()">
+                          </div>
+                      </td>
+                      <td  class="pb-0 mb-0">
+                          <div>
+                              {% for verbo in ilverbo %}
+                                <input type="text" class="form-control" value="{{ verbo.condizionalePresenteLoro }}" id="answercondizionalePresenteLoro" hidden>
+                                <span class="CSSverbsAnswercondizionalePresenteLoro">{{ verbo.condizionalePresenteLoro }}</span>
+                              {% endfor %}
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" class="text-center">
+                        <div class="input-group input-group-sm">
+                            <button type="button" class="btn btn-outline-primary" id="answercondizionalePresente">Controlla</button>&nbsp;
+                            <button type="button" class="btn btn-outline-secondary" id="ricominciacondizionalePresente">Ricomincia</button>
+                      </div>
+                      </td>
+                  </tr>
+              </table>
+              </form>
+          </div>
+        </div>

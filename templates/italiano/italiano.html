@@ -47,10 +47,28 @@
 
     <!-- Verbs CONDIZIONALE -->
     {% for item in ilverbo %}
-    {% for condizionale in verbiCondizionale %}
-        {% if condizionale.infinitivoPresente == item.infinitivoPresente %}
-        <!-- DIVISION LINE -->
-        <div class="container"><hr></div>
+    {% if item.riflessivo %}
+            <!-- DIVISION LINE -->
+            <div class="container"><hr></div>
+
+            <div class="container">
+              <div class="p-3 border bgTransparentVerbs">
+                <div class="text-center"><h4>Condizionale (Conditional)</h4></div>
+                  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+                      <!-- ##### Partial Presente ##### -->
+                        {% include 'italiano/partials/condizionale/riflessivopresente.html' %}
+
+                      <!-- ##### Partial Passato ##### -->
+                        {% include 'italiano/partials/condizionale/riflessivopassato.html' %}
+                  </div>
+              </div>
+            </div>
+    {% else %}
+
+            {% for condizionale in verbiCondizionale %}
+            {% if condizionale.infinitivoPresente == item.infinitivoPresente %}
+            <!-- DIVISION LINE -->
+            <div class="container"><hr></div>
 
             <div class="container">
               <div class="p-3 border bgTransparentVerbs">
@@ -64,8 +82,9 @@
                   </div>
               </div>
             </div>
-        {% endif %}
-    {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
     {% endfor %}
 
     <!-- DIVISION LINE -->

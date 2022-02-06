@@ -1,12 +1,12 @@
-#import requests
+import requests
 
-#api_url = "https://api.ultralingua.com/api/2.0//conjugations/it/essere?key=N78XT58I4LKRVFP3925Q"
-#response = requests.get(api_url)
-#response = response.json()
+api_url = "https://api.ultralingua.com/api/2.0//conjugations/it/essere?key=N78XT58I4LKRVFP3925Q"
+response = requests.get(api_url)
+response = response.json()
 
-#for item in response[0]['conjugations']:
-#    print(item)
-
+for item in response[0]['conjugations']:
+    print(item)
+'''
 import requests
 
 key = 'N78XT58I4LKRVFP3925Q'
@@ -583,3 +583,4 @@ class ApiUltralingua:
 test = ApiUltralingua('mangiare')
 
 #print(test)
+'''
