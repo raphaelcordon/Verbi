@@ -1,0 +1,82 @@
+{% extends 'verbItaliano/italiano/base.html' %}
+{% block content %}
+    <div class="container">
+
+        <!-- ##### Alphabetic ordinary menu START ##### -->
+        <h2 class="text-center text-success mt-1 mb-2"><a href="#piupopolari" class="text-success">Verbi più popolari:</a></h2>
+        <div class="text-center">
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                {% if item in top20 %}
+                  <a href="{{ url_for('verbIta.italianoVerbo', verbo=item) }}" class="button2 bouncy">{{ item|capitalize }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <h3 class="greyColor text-center fontShadow p-2 m-2">|
+            {% for letter in sequence %}
+            &nbsp; <a href="#{{ letter }}" class="text-success"> {{ letter|capitalize }} </a> &nbsp; |
+            {% endfor %}
+        </h3>
+        <hr/>
+        <!-- ##### Alphabetic ordinary menu END ##### -->
+
+        <!-- ##### Alphabetic Riflessivi menu START ##### -->
+        <h2 class="text-center text-info mt-1 mb-2"><a href="#riflessivi" class="text-info">Verbi Riflessivi:</a></h2>
+
+        <h3 class="greyColor text-center fontShadow p-2 m-2">|
+            {% for letter in sequence %}
+            &nbsp; <a href="#riflesivo{{ letter }}" class="text-info"> {{ letter|capitalize }} </a> &nbsp; |
+            {% endfor %}
+        </h3>
+        <hr/>
+        <!-- ##### Alphabetic Riflessivi menu END ##### -->
+
+
+        <!-- ##### Ordinary verbs START ##### -->
+        <h3 class="text-center text-success mt-1 mb-2" id="piupopolari">Verbi più popolari:</h3>
+
+        {% for letter in sequence %}
+        <h3 class="greyColor text-center fontShadow"><div id="{{ letter }}"> <i class="fas fa-ellipsis-h"></i>  <b>{{ letter|capitalize }}</b>  <i class="fas fa-ellipsis-h"></i> </div></h3>
+        <div class="text-justify">
+            {% for item in verbi|map(attribute='verbo')|unique|list|sort %}
+                    {% if item[0] == letter and item in top20 %}
+                        <a href="{{ url_for('verbIta.italianoVerbo', verbo=item) }}"
+                           class="btn btn-link m-1 text-success textUpercase fontShadow"><b>{{ item }}</b>
+                        </a>
+                    {% elif item[0] == letter %}
+                        <a href="{{ url_for('verbIta.italianoVerbo', verbo=item) }}"
+                        class="btn btn-link m-1 text-success textUpercase"> {{ item|capitalize }}
+                        </a>
+                    {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+        {% endfor %}
+        <!-- ##### Ordinary verbs END ##### -->
+
+        <hr/>
+
+        <!-- ##### Riflessivi verbs START ##### -->
+        <h3 class="text-center text-info mt-1 mb-2" id="riflessivi">Verbi Riflessivi:</h3>
+
+        {% for letter in sequence %}
+        <h3 class="greyColor text-center fontShadow"><div id="riflesivo{{ letter }}"> <i class="fas fa-ellipsis-h"></i>  <b>{{ letter|capitalize }}</b>  <i class="fas fa-ellipsis-h"></i> </div></h3>
+        <div class="text-justify">
+            {% for item in riflessivi|map(attribute='verbo')|unique|list|sort %}
+                    {% if item[0] == letter and item in top20 %}
+                        <a href="{{ url_for('verbIta.italianoVerbo', verbo=item) }}"
+                           class="btn btn-link m-1 text-info textUpercase fontShadow"><b>{{ item }}</b>
+                        </a>
+                    {% elif item[0] == letter %}
+                        <a href="{{ url_for('verbIta.italianoVerbo', verbo=item) }}"
+                        class="btn btn-link m-1 text-info textUpercase"> {{ item|capitalize }}
+                        </a>
+                    {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+        {% endfor %}
+        <!-- ##### Riflessivi verbs END ##### -->
+
+    </div>
+{% endblock %}

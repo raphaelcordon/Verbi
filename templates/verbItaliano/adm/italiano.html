@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    {% include 'adm/partials/adm/topMenuVerbiItaliano.html' %}
+</div>
+<form class="form-inline" method="POST" action="{{ url_for('verbInd.admItalianoUpdateVerbo') }}" enctype="multipart/form-data">
+    <!-- Main Buttons controlling all -->
+    <div class="container pb-4 text-center">
+      <div class="row row-cols-1">
+        <div class="col">
+          <h4 class="p-3 border" id="shineVerb">Verbo&nbsp; "{% for item in ilverbo %}{{ item.infinitivoPresente|capitalize }}{% endfor %}"</h4>
+                <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Aggiorni i verbi</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verbs INDICATIVO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>INDICATIVO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Presente ##### -->
+                {% include 'adm/partials/italiano/indicativo/presente.html' %}
+
+              <!-- ##### Partial Passato Prossimo ##### -->
+                {% include 'adm/partials/italiano/indicativo/passatoProssimo.html' %}
+
+              <!-- ##### Partial Imperfetto ##### -->
+                {% include 'adm/partials/italiano/indicativo/imperfetto.html' %}
+
+              <!-- ##### Partial Trapassato Prossimo ##### -->
+                {% include 'adm/partials/italiano/indicativo/trapassatoProssimo.html' %}
+
+              <!-- ##### Partial Passato Remoto ##### -->
+                {% include 'adm/partials/italiano/indicativo/passatoRemoto.html' %}
+
+              <!-- ##### Partial Passato Remoto ##### -->
+                {% include 'adm/partials/italiano/indicativo/trapassatoRemoto.html' %}
+
+              <!-- ##### Partial Futuro Semplice ##### -->
+                {% include 'adm/partials/italiano/indicativo/futuroSemplice.html' %}
+
+              <!-- ##### Partial Futuro Anteriore ##### -->
+                {% include 'adm/partials/italiano/indicativo/futuroAnteriore.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs CONGIUNTIVO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>CONGIUNTIVO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Presente ##### -->
+                {% include 'adm/partials/italiano/congiuntivo/presente.html' %}
+
+              <!-- ##### Partial Passato ##### -->
+                {% include 'adm/partials/italiano/congiuntivo/passato.html' %}
+
+              <!-- ##### Partial Imperfetto ##### -->
+                {% include 'adm/partials/italiano/congiuntivo/imperfetto.html' %}
+
+              <!-- ##### Partial Trapassato ##### -->
+                {% include 'adm/partials/italiano/congiuntivo/trapassato.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs IMPERATIVO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>Imperativo</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Imperativo ##### -->
+                {% include 'adm/partials/italiano/imperativo/presente.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs INFINITO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>INFINITO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Infinito ##### -->
+                {% include 'adm/partials/italiano/infinitivo/presente.html' %}
+
+              <!-- ##### Partial Infinito Passato ##### -->
+                {% include 'adm/partials/italiano/infinitivo/passato.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs PARTICIPIO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>PARTICIPIO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Participio ##### -->
+                {% include 'adm/partials/italiano/participio/presente.html' %}
+
+              <!-- ##### Partial Passato ##### -->
+                {% include 'adm/partials/italiano/participio/passato.html' %}
+          </div>
+      </div>
+    </div>
+
+    <!-- DIVISION LINE -->
+    <div class="container"><hr></div>
+
+    <!-- Verbs GERUNDIO -->
+    <div class="container">
+      <div class="p-3 border bgTransparentVerbs">
+        <div class="text-center"><h4>GERUNDIO</h4></div>
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+              <!-- ##### Partial Presente ##### -->
+                {% include 'adm/partials/italiano/gerundio/presente.html' %}
+
+              <!-- ##### Partial Passato ##### -->
+                {% include 'adm/partials/italiano/gerundio/passato.html' %}
+          </div>
+      </div>
+    </div>
+
+
+</div>
+</form>
+{% endblock %}
