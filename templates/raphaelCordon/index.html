@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Raphael Cordon personal website">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>..:: Raphael Cordon ::..</title>
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='raphaelCordon/reset.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='raphaelCordon/main_style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <!-- ##### Header Start ##### -->
+            <header>
+                    <a href="http://www.raphaelcordon.com/"><img src="{{ url_for('static', filename='raphaelCordon/index/main_logo.png') }}" class="mainlogo"></a>
+                    <a href="http://www.raphaelcordon.com/" class="header_link">raphaelcordon.com</a>
+                <hr/>
+            </header>
+            <!-- ##### Header End ##### -->
+
+            <!-- ##### Introduction Start ##### -->
+            <section class="image"><img src="{{ url_for('static', filename='raphaelCordon/index/eu.png') }}"></section>
+            <section class='introduction'>
+                <h1 class="mainMessage" id="iam">I am Raphael Cordon</h1>
+                <p>IT professional for more than 11 years with a strong focus on Project Management.</p>
+                <p>My professional background is available on LinkedIn, please find the links below for my social media.</p>
+
+                <p class="paddingTop">I am Brazilian, living in Zürich, Switzerland since the beginning of 2020, after four years of living and working in Ireland.</p>
+            </section>
+            <article class="articles paddingBottom" id="articles">
+                <section class='introduction'>
+                    <div>
+                        <p>Check below:</p>
+                        <a href="#buttonPM" id="buttonPM" onclick="toggleMenu('dataPM')"><i class="mainLinks fas fa-project-diagram">&nbsp; Project Management</i></a>
+                        <br>
+                        <!-- Article PM  -->
+                        {% include 'raphaelCordon//partials/articlePM.html' %}
+                        <a href="#buttonPM" id="buttonDev" onclick="toggleMenu('dataDev')"><i class="mainLinks fas fa-code">&nbsp; Software Development</i></a>
+                        <br>
+                        <!-- Article DEV  -->
+                        {% include 'raphaelCordon//partials/articleDev.html' %}
+                        <a href="#buttonPM" id="buttonCert" onclick="toggleMenu('dataCert')"><i class="mainLinks fas fa-graduation-cap">&nbsp; Certifications and Courses</i></a>
+                        <br>
+                        <!-- Article CERT  -->
+                        {% include 'raphaelCordon//partials/articleCert.html' %}
+                    </div>
+                </section>
+            </article>    
+            <!-- ##### Introduction End ##### -->
+
+            <!-- ##### Social Media Start ##### -->
+            <h3 class="mainMessage">My Social Media</h3>
+            <section class="social_media paddingBottom">
+                <p class="paddingBottom"><a href="https://github.com/raphaelcordon" id="Github" target="_blank">
+                    <i class="fab fa-github">&nbsp; Github</i></a></p>
+
+                <p class="paddingBottom"><a href="https://www.linkedin.com/in/raphael-cordon-04440820/" id="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in">&nbsp; LinkedIn</i></a></p>
+
+                <p class="paddingBottom"><a href="https://raphaelcordon.wordpress.com/" id="Wordpress" target="_blank">
+                    <i class="fab fa-wordpress"> Wordpress</i></a></p>
+
+                <p class="paddingBottom"><a href="https://www.facebook.com/raphael.cordon" id="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f">&nbsp;&nbsp; Facebook</i></a></p>
+            </section>
+            <!-- ##### Social Media End ##### -->
+
+            <!-- ##### Apps Start ##### -->
+            <h3 class="mainMessage" id="appsArea">Apps</h3>
+            <section class="introduction paddingBottom">
+                <div class="paddingTop ">
+                    <h5 class="thirdMessage"><i class="fab fa-python paddingBottom">&nbsp; Python | Flask library</i></h5>
+                    <section class="appsBackground">
+                        <a href="#buttonResenhando" id="buttonResenhando"><i class="far fa-file-code paddingBottom">&nbsp; Resenhando.co</i></a>
+                        <br>
+                        <!-- App Resenhando  -->
+                        {% include 'raphaelCordon/partials/appResenhando.html' %}
+
+                        <a href="#buttonMovieAPI" id="buttonMovieAPI"><i class="far fa-file-code paddingBottom">&nbsp; Movies API</i></a>
+                        <br>
+                        <!-- App Movie API -->
+                        {% include 'raphaelCordon/partials/appMovieAPI.html' %}
+
+                        <a href="#buttonMusicSchool" id="buttonMusicSchool"><i class="far fa-file-code paddingBottom">&nbsp; Music School Adm</i></a>
+                        <br>
+                        <!-- App Music School -->
+                        {% include 'raphaelCordon/partials/appMusicSchool.html' %}
+                    </section>
+                </div>
+            </section>
+            <!-- ##### Apps End ##### -->
+        </main>
+
+        <!-- ##### Footer Start ##### -->
+        <footer>
+            <a href="http://www.raphaelcordon.com/">
+                <img src="{{ url_for('static', filename='raphaelCordon/index/main_logo_white.png') }}" class="footer_logo"></a>
+            <p class="copyright">&copy; Raphael Cordon - 2022</p>
+        </footer>
+        <!-- ##### Footer End ##### -->
+
+
+        <!-- ##### All Javascript Files ##### -->
+        <!-- jQuery-2.2.4 js -->
+        <script src="{{ url_for('static', filename='raphaelCordon/js/jquery/jquery-2.2.4.min.js') }}"></script>
+        <!-- Font Awasome -->
+        <script src="https://kit.fontawesome.com/7063f4dbe2.js" crossorigin="anonymous"></script>
+        <!-- Hide Menu Js -->
+        <script src="{{ url_for('static', filename='raphaelCordon/js/hideMenu.js') }}"></script>
+        <!-- Hide Menu Js -->
+        <script src="{{ url_for('static', filename='raphaelCordon/js/hideApps.js') }}"></script>
+    </body>
+</html> 
