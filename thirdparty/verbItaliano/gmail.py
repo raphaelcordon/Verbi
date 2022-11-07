@@ -14,7 +14,7 @@ class EmailPassword:
                         )
 
         with SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login('cordonraphael@gmail.com', 'piuxeaxjwrqifhcw')
+            # smtp.login('cordonraphael@gmail.com', 'piuxeaxjwrqifhcw')
             smtp.send_message(msg)
 
 
